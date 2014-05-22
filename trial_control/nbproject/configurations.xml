@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="Modules"
+                   displayName="Modules"
+                   projectFiles="true"
+                   root="/usr/share/cmake-2.8/Modules">
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c</itemPath>
+      <itemPath>/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp</itemPath>
+    </logicalFolder>
+    <df name="trial_control" root=".">
+      <df name="bin">
+      </df>
+      <df name="build">
+        <df name="CMakeFiles">
+          <df name="clean-test-results.dir">
+          </df>
+          <df name="CMakeTmp">
+            <df name="CMakeFiles">
+              <df name="cmTryCompileExec.dir">
+              </df>
+            </df>
+          </df>
+          <df name="CompilerIdC">
+            <in>CMakeCCompilerId.c</in>
+          </df>
+          <df name="CompilerIdCXX">
+            <in>CMakeCXXCompilerId.cpp</in>
+          </df>
+          <df name="ROSBUILD_genmsg_cpp.dir">
+          </df>
+          <df name="ROSBUILD_genmsg_lisp.dir">
+          </df>
+          <df name="ROSBUILD_gensrv_cpp.dir">
+          </df>
+          <df name="ROSBUILD_gensrv_lisp.dir">
+          </df>
+          <df name="rosbuild_precompile.dir">
+          </df>
+          <df name="rosbuild_premsgsrvgen.dir">
+          </df>
+          <df name="rospack_genmsg.dir">
+          </df>
+          <df name="rospack_genmsg_libexe.dir">
+          </df>
+          <df name="rospack_gensrv.dir">
+          </df>
+          <df name="test-future.dir">
+          </df>
+          <df name="test-results-run.dir">
+          </df>
+          <df name="test-results.dir">
+          </df>
+          <df name="test.dir">
+          </df>
+          <df name="tests.dir">
+          </df>
+        </df>
+      </df>
+      <df name="CMakeFiles">
+        <df name="clean-test-results.dir">
+        </df>
+        <df name="CMakeTmp">
+          <df name="CMakeFiles">
+            <df name="cmTryCompileExec.dir">
+            </df>
+          </df>
+        </df>
+        <df name="CompilerIdC">
+          <in>CMakeCCompilerId.c</in>
+        </df>
+        <df name="CompilerIdCXX">
+          <in>CMakeCXXCompilerId.cpp</in>
+        </df>
+        <df name="posi.dir">
+          <df name="src">
+          </df>
+        </df>
+        <df name="ROSBUILD_genmsg_cpp.dir">
+        </df>
+        <df name="ROSBUILD_genmsg_lisp.dir">
+        </df>
+        <df name="ROSBUILD_gensrv_cpp.dir">
+        </df>
+        <df name="ROSBUILD_gensrv_lisp.dir">
+        </df>
+        <df name="rosbuild_precompile.dir">
+        </df>
+        <df name="rosbuild_premsgsrvgen.dir">
+        </df>
+        <df name="rospack_genmsg.dir">
+        </df>
+        <df name="rospack_genmsg_libexe.dir">
+        </df>
+        <df name="rospack_gensrv.dir">
+        </df>
+        <df name="test-future.dir">
+        </df>
+        <df name="test-results-run.dir">
+        </df>
+        <df name="test-results.dir">
+        </df>
+        <df name="test.dir">
+        </df>
+        <df name="tests.dir">
+        </df>
+      </df>
+      <df name="src">
+        <in>posi.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c"
+            ex="true"
+            tool="0"
+            flavor="0">
+      </item>
+      <item path="build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+            ex="true"
+            tool="1"
+            flavor="0">
+      </item>
+      <folder path="Modules">
+        <cTool>
+          <incDir>
+            <pElem>CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>CMakeFiles/CMakeTmp</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="trial_control/src">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/boost/function</pElem>
+            <pElem>/usr/include/boost/math/tools</pElem>
+            <pElem>/usr/include/boost/detail</pElem>
+            <pElem>/usr/include/boost</pElem>
+            <pElem>/opt/ros/fuerte/include</pElem>
+            <pElem>/usr/include/log4cxx</pElem>
+            <pElem>../barrett-ros-pkg/wam_common/wam_msgs/msg_gen/cpp/include/wam_msgs</pElem>
+            <pElem>/usr/include/boost/mpl/aux_/preprocessed/gcc</pElem>
+            <pElem>/usr/include/boost/format</pElem>
+            <pElem>/usr/include/boost/mpl</pElem>
+            <pElem>/opt/ros/fuerte/include/ros</pElem>
+            <pElem>/usr/include/boost/smart_ptr/detail</pElem>
+            <pElem>/usr/include/boost/bind</pElem>
+            <pElem>src</pElem>
+            <pElem>/usr/include/log4cxx/helpers</pElem>
+            <pElem>/usr/include/boost/mpl/aux_</pElem>
+            <pElem>/usr/include/boost/math/special_functions/detail</pElem>
+            <pElem>/usr/include/boost/math/policies</pElem>
+            <pElem>/usr/include/boost/exception</pElem>
+            <pElem>/usr/include/boost/utility</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/log4cxx/spi</pElem>
+            <pElem>../barrett-ros-pkg/wam_common/wam_msgs/msg_gen/cpp/include</pElem>
+            <pElem>/usr/include/boost/format/detail</pElem>
+            <pElem>/usr/include/boost/type_traits/detail</pElem>
+            <pElem>/usr/include/boost/smart_ptr</pElem>
+            <pElem>/usr/include/boost/optional</pElem>
+            <pElem>/usr/include/boost/type_traits</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>

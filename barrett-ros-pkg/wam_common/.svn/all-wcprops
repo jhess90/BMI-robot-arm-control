@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/barrett-ros-pkg/!svn/ver/15/trunk/wam_common
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/barrett-ros-pkg/!svn/ver/15/trunk/wam_common/CMakeLists.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/barrett-ros-pkg/!svn/ver/15/trunk/wam_common/Makefile
+END
+stack.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/barrett-ros-pkg/!svn/ver/15/trunk/wam_common/stack.xml
+END

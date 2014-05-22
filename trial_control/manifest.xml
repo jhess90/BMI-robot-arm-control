@@ -1,0 +1,17 @@
+<package>
+  <description brief="trial_control">
+
+     trial_control
+
+  </description>
+  <author>robot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/trial_control</url>
+  <depend package="wam_msgs"/>
+  <depend package="wam_srvs"/>
+  <depend package="wam_node"/>
+
+</package>
+
+
