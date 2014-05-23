@@ -1,0 +1,17 @@
+<package>
+  <description brief="wam_control">
+
+     wam_control
+
+  </description>
+  <author>robot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wam_control</url>
+  <depend package="wam_node"/>
+  <depend package="wam_srvs"/>
+  <depend package="wam_msgs"/>
+
+</package>
+
+

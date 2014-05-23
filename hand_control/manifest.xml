@@ -1,0 +1,18 @@
+<package>
+  <description brief="hand_control">
+
+     hand_control
+
+  </description>
+  <author>robot</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/hand_control</url>
+  <depend package="wam_node"/>
+  <depend package="wam_msgs"/>
+  <depend package="wam_srvs"/>
+  <depend package="wam_control"/>
+
+</package>
+
+
