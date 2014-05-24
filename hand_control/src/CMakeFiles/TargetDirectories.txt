@@ -1,0 +1,1 @@
+/home/robot/fuerte_workspace/sandbox/hand_control/src/CMakeFiles/my_control.dir

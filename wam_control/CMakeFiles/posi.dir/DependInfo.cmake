@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robot/fuerte_workspace/sandbox/wam_control/posi.cpp" "/home/robot/fuerte_workspace/sandbox/wam_control/CMakeFiles/posi.dir/posi.o"
+  "/home/robot/fuerte_workspace/sandbox/wam_control/src/posi.cpp" "/home/robot/fuerte_workspace/sandbox/wam_control/CMakeFiles/posi.dir/src/posi.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

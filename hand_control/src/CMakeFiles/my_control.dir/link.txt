@@ -1,0 +1,1 @@
+/usr/bin/c++   -O2 -g    CMakeFiles/my_control.dir/my_control.cpp.o  -o my_control -rdynamic -lboost_thread-mt -lpthread -lboost_python -L/usr/lib -lgsl -lgslcblas -lm -lconfig -lconfig++ /usr/xenomai/lib/libnative.so /usr/xenomai/lib/libxenomai.so /usr/xenomai/lib/librtdm.so -lpython2.7 -lbarrett -Wl,-rpath,/usr/xenomai/lib 

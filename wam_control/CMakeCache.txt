@@ -183,7 +183,7 @@ ROSPACK_EXE:FILEPATH=/opt/ros/fuerte/bin/rospack
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/robot/fuerte_workspace/sandbox/wam_control/posi.cpp
+_file_name:FILEPATH=/home/robot/fuerte_workspace/sandbox/wam_control/src/posi.cpp
 
 //Value Computed by CMake
 wam_control_BINARY_DIR:STATIC=/home/robot/fuerte_workspace/sandbox/wam_control

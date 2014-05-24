@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/robot/fuerte_workspace/sandbox/hand_control/src/my_control.cpp
+iostream
+-
+vector
+-
+string
+-
+boost/ref.hpp
+-
+boost/bind.hpp
+-
+boost/tuple/tuple.hpp
+-
+boost/thread.hpp
+-
+barrett/detail/stl_utils.h
+-
+barrett/math.h
+-
+barrett/units.h
+-
+barrett/systems.h
+-
+barrett/log.h
+-
+barrett/products/product_manager.h
+-
+barrett/standard_main_function.h
+-
+

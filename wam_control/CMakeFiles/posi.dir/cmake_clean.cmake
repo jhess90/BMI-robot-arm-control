@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/posi.dir/posi.o"
+  "CMakeFiles/posi.dir/src/posi.o"
   "bin/posi.pdb"
   "bin/posi"
 )

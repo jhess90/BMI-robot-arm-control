@@ -304,19 +304,19 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
-posi.o:
-	$(MAKE) -f CMakeFiles/posi.dir/build.make CMakeFiles/posi.dir/posi.o
-.PHONY : posi.o
+src/posi.o:
+	$(MAKE) -f CMakeFiles/posi.dir/build.make CMakeFiles/posi.dir/src/posi.o
+.PHONY : src/posi.o
 
 # target to preprocess a source file
-posi.i:
-	$(MAKE) -f CMakeFiles/posi.dir/build.make CMakeFiles/posi.dir/posi.i
-.PHONY : posi.i
+src/posi.i:
+	$(MAKE) -f CMakeFiles/posi.dir/build.make CMakeFiles/posi.dir/src/posi.i
+.PHONY : src/posi.i
 
 # target to generate assembly for a file
-posi.s:
-	$(MAKE) -f CMakeFiles/posi.dir/build.make CMakeFiles/posi.dir/posi.s
-.PHONY : posi.s
+src/posi.s:
+	$(MAKE) -f CMakeFiles/posi.dir/build.make CMakeFiles/posi.dir/src/posi.s
+.PHONY : src/posi.s
 
 # Help Target
 help:
@@ -342,9 +342,9 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
-	@echo "... posi.o"
-	@echo "... posi.i"
-	@echo "... posi.s"
+	@echo "... src/posi.o"
+	@echo "... src/posi.i"
+	@echo "... src/posi.s"
 .PHONY : help
 
 
