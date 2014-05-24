@@ -1,1 +1,18 @@
-hi
+Brain Machine interface:
+==========================
+
+Objective of the project is to use signal from brain to control a robotic arm in real time.
+
+Project consists of set of ROS packages which communicate with ROS node running on robotic arm.
+
+Hardware:
+Barrett WAM and Barrett Hand BH8-280 for this project. 
+
+Software:
+Barrett internal PC runs ROS-Fuerte on ubuntu 12.04
+External control PC runs ROS-Fuerte on ubuntu 12.04 with xenomai kernal
+
+
+
+
+
