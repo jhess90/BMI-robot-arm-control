@@ -22,4 +22,6 @@ include_directories(${BARRETT_INCLUDE_DIRS})
 add_definitions(${BARRETT_DEFINITIONS})
 rosbuild_add_executable(bh280_node src/bh280_node.cpp)
 target_link_libraries(bh280_node ${BARRETT_LIBRARIES})
+rosbuild_add_executable(my_control src/my_control.cpp)
+target_link_libraries(my_control ${BARRETT_LIBRARIES})
 

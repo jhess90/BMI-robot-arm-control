@@ -4,6 +4,7 @@
 /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/bh280_node.dir
 /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/clean-test-results.dir
+/home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/my_control.dir
 /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/rosbuild_precompile.dir
 /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles/rospack_genmsg.dir

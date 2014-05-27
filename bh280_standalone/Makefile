@@ -174,6 +174,19 @@ clean-test-results/fast:
 .PHONY : clean-test-results/fast
 
 #=============================================================================
+# Target rules for targets named my_control
+
+# Build rule for target.
+my_control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_control
+.PHONY : my_control
+
+# fast build rule for target.
+my_control/fast:
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/build
+.PHONY : my_control/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_precompile
 
 # Build rule for target.
@@ -318,6 +331,21 @@ src/bh280_node.s:
 	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/src/bh280_node.s
 .PHONY : src/bh280_node.s
 
+# target to build an object file
+src/my_control.o:
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/src/my_control.o
+.PHONY : src/my_control.o
+
+# target to preprocess a source file
+src/my_control.i:
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/src/my_control.i
+.PHONY : src/my_control.i
+
+# target to generate assembly for a file
+src/my_control.s:
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/src/my_control.s
+.PHONY : src/my_control.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -331,6 +359,7 @@ help:
 	@echo "... bh280_node"
 	@echo "... clean-test-results"
 	@echo "... edit_cache"
+	@echo "... my_control"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -345,6 +374,9 @@ help:
 	@echo "... src/bh280_node.o"
 	@echo "... src/bh280_node.i"
 	@echo "... src/bh280_node.s"
+	@echo "... src/my_control.o"
+	@echo "... src/my_control.i"
+	@echo "... src/my_control.s"
 .PHONY : help
 
 

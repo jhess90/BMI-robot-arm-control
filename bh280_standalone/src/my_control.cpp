@@ -1,8 +1,9 @@
 /*
- * teach_with_hand.cpp
+ * my_control.cpp
  *
  *  Created on: Mar 31, 2011
- *      Author: dc
+ *      Author: Rohit Kalaskar
+ *	 Email: rohitkalaskar22@gmail.com
  */
 
 #include <iostream>
@@ -41,16 +42,103 @@ enum TP_STATE {
 } tpState = WAIT_FOR_TEACH;
 bool loop = false;
 
+void assertPosition(Hand* hand, Hand::jp_type innerLinkJp, double tolerance = 0.05) {
+        hand->update();
+        if (math::abs(hand->getInnerLinkPosition() - innerLinkJp).maxCoeff() > tolerance) {
+                std::cout << hand->getInnerLinkPosition() << " is not close enough to " << innerLinkJp << "\n";
+                exit(2);
+        }
+}
+
+
 
 void displayEntryPoint(Hand* hand) {
+	
+	typedef Hand::jp_type hjp_t;
+	double O = 0.0;
+        double C = 2.4;
+	double C1= 1.2;
+        double SC = M_PI;
+        hjp_t open(O);
+        hjp_t closed(C);
+	hjp_t closed1(C1);
+        closed[3] = SC;
+	closed1[3]= SC;
+
+        double OR = -0.75;
+        double CR = 0.75;
+        Hand::jv_type opening(OR);
+        Hand::jv_type closing(CR);
+	Hand::jt_type oopen(-1.00);
+	Hand::jt_type cclose(1.00);
+	Hand::jt_type cclose1(0.50);
+
+
+
 	if (hand != NULL) {
 		printf("Press [Enter] to initialize the Hand. (Make sure it has room!)");
-		waitForEnter();
-
+		waitForEnter();	
 		hand->initialize();
 	} else {
 		printf("WARNING: No Hand found!\n");
 	}
+
+	assertPosition(hand, open);
+        hand->close();
+        assertPosition(hand, closed);
+        hand->open();
+        assertPosition(hand, open);
+        hand->close(Hand::SPREAD);
+
+/*
+	{
+                // Original interface preserved? Should move all 4 motors.
+                hand->trapezoidalMove(closed);
+                assertPosition(hand, closed);
+                hand->trapezoidalMove(open, false);
+                hand->waitUntilDoneMoving();
+                assertPosition(hand, open);
+
+                // New interface
+                hand->trapezoidalMove(closed1, Hand::SPREAD);
+                assertPosition(hand, hjp_t(O,O,O,SC));std::cout<<"111"<<std::endl;
+                hand->trapezoidalMove(closed1, Hand::F1);
+                assertPosition(hand, hjp_t(C1,O,O,SC));std::cout<<"222"<<std::endl;
+                hand->trapezoidalMove(closed1, Hand::F2);
+                assertPosition(hand, hjp_t(C1,C1,O,SC));std::cout<<"333"<<std::endl;
+                hand->trapezoidalMove(closed1, Hand::F3);
+                assertPosition(hand, closed1);std::cout<<"444"<<std::endl;
+                hand->trapezoidalMove(open, Hand::GRASP);
+                assertPosition(hand, hjp_t(O,O,O,SC));std::cout<<"555"<<std::endl;
+                hand->trapezoidalMove(open, Hand::SPREAD);
+                assertPosition(hand, open);std::cout<<"666"<<std::endl;
+                hand->trapezoidalMove(closed1, Hand::F3 | Hand::SPREAD);
+                assertPosition(hand, hjp_t(O,O,C1,SC));std::cout<<"777"<<std::endl;
+                hand->trapezoidalMove(open, Hand::WHOLE_HAND);
+                assertPosition(hand, open);
+        }
+
+	{
+                double t = 0.0;
+
+                // Original interface preserved? Should move all 4 motors.
+                hand->velocityMove(closing);
+                btsleep(1);
+                t = 1.0;
+                assertPosition(hand, hjp_t(CR*t), 0.2);
+
+                // New interface
+                hand->velocityMove(opening, Hand::GRASP);
+                btsleep(1);
+                t = 2.0;
+                assertPosition(hand, hjp_t(O,O,O,CR*t), 0.4);
+                hand->velocityMove(opening, Hand::WHOLE_HAND);
+                hand->waitUntilDoneMoving();
+                assertPosition(hand, open);
+        }
+
+*/
+
 
 	Hand::jp_type currentPos(0.0);
 	Hand::jp_type nextPos(M_PI);
@@ -78,13 +166,19 @@ void displayEntryPoint(Hand* hand) {
 			}
 		} else {
 			switch (line[0]) {
-			case 't':
+			case 'c':
+				hand->setTorqueMode();
+				hand->setTorqueCommand(cclose);
 				tpState = TEACHING;
 				break;
 			case 'l':
-				loop = true;
-				//break;
-			case 'p':
+				hand->setTorqueMode();
+                                hand->setTorqueCommand(cclose1);
+
+				//loop = true;
+				break;
+			case 'o':
+				hand->open();
 				tpState = PLAYING;
 				break;
 			case 's':
@@ -107,6 +201,7 @@ int wam_main(int argc, char** argv, ProductManager& pm, systems::Wam<DOF>& wam) 
 	BARRETT_UNITS_TEMPLATE_TYPEDEFS(DOF);
 	typedef boost::tuple<double, jp_type> jp_sample_type;
 
+
 	char tmpFile[] = "/tmp/btXXXXXX";
 	if (mkstemp(tmpFile) == -1) {
 		printf("ERROR: Couldn't create temporary file!\n");
@@ -116,113 +211,10 @@ int wam_main(int argc, char** argv, ProductManager& pm, systems::Wam<DOF>& wam) 
 	const double T_s = pm.getExecutionManager()->getPeriod();
 
 
-	wam.gravityCompensate();
+	//wam.gravityCompensate();
 	boost::thread displayThread(displayEntryPoint, pm.getHand());
 
-	while (true) {
-		systems::Ramp time(pm.getExecutionManager());
-		systems::TupleGrouper<double, jp_type> jpLogTg;
-		systems::PeriodicDataLogger<jp_sample_type> jpLogger(pm.getExecutionManager(),
-				new barrett::log::RealTimeWriter<jp_sample_type>(tmpFile, 10*T_s), 10);
 
-		while (tpState != TEACHING) {
-			usleep(100000);
-		}
-
-		{
-			// Make sure the Systems are connected on the same execution cycle
-			// that the time is started. Otherwise we might record a bunch of
-			// samples all having t=0; this is bad because the Spline requires time
-			// to be monotonic.
-			BARRETT_SCOPED_LOCK(pm.getExecutionManager()->getMutex());
-
-			connect(time.output, jpLogTg.template getInput<0>());
-			connect(wam.jpOutput, jpLogTg.template getInput<1>());
-			connect(jpLogTg.output, jpLogger.input);
-			time.start();
-		}
-		printf("--> Recording\n");
-
-
-		while (tpState != WAIT_FOR_PLAY) {
-			usleep(100000);
-		}
-		jpLogger.closeLog();
-		disconnect(jpLogger.input);
-		printf("--> Done recording\n");
-
-
-		// Build spline between recorded points
-		log::Reader<jp_sample_type> lr(tmpFile);
-		std::vector<jp_sample_type> vec;
-		for (size_t i = 0; i < lr.numRecords(); ++i) {
-			vec.push_back(lr.getRecord());
-		}
-		math::Spline<jp_type> spline(vec);
-
-		systems::Callback<double, jp_type> trajectory(boost::ref(spline));
-		connect(time.output, trajectory.input);
-
-
-		while (true) {
-			while (tpState != PLAYING) {
-				usleep(100000);
-			}
-			printf("--> Moving to start position\n");
-
-			// First, move to the starting position
-			wam.moveTo(spline.eval(spline.initialS()));
-
-			// Then play back the recorded motion
-			time.stop();
-			time.setOutput(spline.initialS());
-
-			wam.trackReferenceSignal(trajectory.output);
-
-			time.start();
-			printf("--> Playing\n");
-
-//			while (trajectory.input.getValue() < spline.finalS()) {
-//				usleep(100000);
-//			}
-
-
-			while (tpState == PLAYING) {
-				usleep(100000);
-
-				if (trajectory.input.getValue() >= spline.finalS()) {
-					tpState = DONE_PLAYING;
-				}
-			}
-			printf("--> Done playing\n");
-			if (tpState == DONE_PLAYING  &&  loop) {
-				tpState = PLAYING;
-				printf("--> Looping!\n");
-				continue;
-			}
-			while (tpState == DONE_PLAYING) {
-				usleep(100000);
-			}
-			if (tpState == PLAYING) {
-				continue;
-			} else if (tpState == IDLE) {
-				wam.idle();
-				printf("--> Idle\n");
-
-				while (tpState == IDLE) {
-					usleep(100000);
-				}
-				if (tpState == PLAYING) {
-					continue;
-				} else {
-					break;
-				}
-			} else {
-				wam.idle();
-				break;
-			}
-		}
-	}
 
 	std::remove(tmpFile);
 	pm.getSafetyModule()->waitForMode(SafetyModule::IDLE);

@@ -240,6 +240,41 @@ clean: CMakeFiles/clean-test-results.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/my_control.dir
+
+# All Build rule for target.
+CMakeFiles/my_control.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/depend
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles  2
+	@echo "Built target my_control"
+.PHONY : CMakeFiles/my_control.dir/all
+
+# Include target in all.
+all: CMakeFiles/my_control.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/my_control.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/my_control.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/fuerte_workspace/sandbox/bh280_standalone/CMakeFiles 0
+.PHONY : CMakeFiles/my_control.dir/rule
+
+# Convenience name for target.
+my_control: CMakeFiles/my_control.dir/rule
+.PHONY : my_control
+
+# clean rule for target.
+CMakeFiles/my_control.dir/clean:
+	$(MAKE) -f CMakeFiles/my_control.dir/build.make CMakeFiles/my_control.dir/clean
+.PHONY : CMakeFiles/my_control.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/my_control.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/rosbuild_precompile.dir
 
 # All Build rule for target.
