@@ -44,78 +44,75 @@ include CMakeFiles/ROSBUILD_gensrv_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_gensrv_py: ../src/wam_srvs/srv/__init__.py
 
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_PoseMove.py
 ../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandSpreadPos.py
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandGraspPos.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_OrtnMove.py
 ../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandGraspVel.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandFingerPos.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandFingerVel.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandSpreadVel.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_GravityComp.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandGraspPos.py
+../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_PoseMove.py
 ../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_CartPosMove.py
 ../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_JointMove.py
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_GravityComp.py
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandSpreadVel.py
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandFingerVel.py
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_BHandFingerPos.py
 ../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_Hold.py
-../src/wam_srvs/srv/__init__.py: ../src/wam_srvs/srv/_OrtnMove.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/PoseMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadPos.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspPos.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspVel.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/CartPosMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/JointMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/GravityComp.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadVel.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerVel.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerPos.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/Hold.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/OrtnMove.srv
-
-../src/wam_srvs/srv/_PoseMove.py: ../srv/PoseMove.srv
-../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
-../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
-../src/wam_srvs/srv/_PoseMove.py: ../manifest.xml
-../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_PoseMove.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/PoseMove.srv
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadPos.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/OrtnMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspVel.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerPos.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerVel.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadVel.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/GravityComp.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspPos.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/PoseMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/CartPosMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/JointMove.srv /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/Hold.srv
 
 ../src/wam_srvs/srv/_BHandSpreadPos.py: ../srv/BHandSpreadPos.srv
 ../src/wam_srvs/srv/_BHandSpreadPos.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
 ../src/wam_srvs/srv/_BHandSpreadPos.py: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../src/wam_srvs/srv/_BHandSpreadPos.py: ../manifest.xml
 ../src/wam_srvs/srv/_BHandSpreadPos.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandSpreadPos.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadPos.srv
 
-../src/wam_srvs/srv/_BHandGraspPos.py: ../srv/BHandGraspPos.srv
-../src/wam_srvs/srv/_BHandGraspPos.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_BHandGraspPos.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_BHandGraspPos.py: ../manifest.xml
-../src/wam_srvs/srv/_BHandGraspPos.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandGraspPos.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspPos.srv
+../src/wam_srvs/srv/_OrtnMove.py: ../srv/OrtnMove.srv
+../src/wam_srvs/srv/_OrtnMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_OrtnMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_OrtnMove.py: ../manifest.xml
+../src/wam_srvs/srv/_OrtnMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_OrtnMove.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/OrtnMove.srv
 
 ../src/wam_srvs/srv/_BHandGraspVel.py: ../srv/BHandGraspVel.srv
 ../src/wam_srvs/srv/_BHandGraspVel.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
 ../src/wam_srvs/srv/_BHandGraspVel.py: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../src/wam_srvs/srv/_BHandGraspVel.py: ../manifest.xml
 ../src/wam_srvs/srv/_BHandGraspVel.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandGraspVel.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspVel.srv
 
-../src/wam_srvs/srv/_CartPosMove.py: ../srv/CartPosMove.srv
-../src/wam_srvs/srv/_CartPosMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_CartPosMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_CartPosMove.py: ../manifest.xml
-../src/wam_srvs/srv/_CartPosMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_CartPosMove.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/CartPosMove.srv
+../src/wam_srvs/srv/_BHandFingerPos.py: ../srv/BHandFingerPos.srv
+../src/wam_srvs/srv/_BHandFingerPos.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_BHandFingerPos.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_BHandFingerPos.py: ../manifest.xml
+../src/wam_srvs/srv/_BHandFingerPos.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandFingerPos.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerPos.srv
 
-../src/wam_srvs/srv/_JointMove.py: ../srv/JointMove.srv
-../src/wam_srvs/srv/_JointMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_JointMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_JointMove.py: ../manifest.xml
-../src/wam_srvs/srv/_JointMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../src/wam_srvs/srv/_BHandFingerVel.py: ../srv/BHandFingerVel.srv
+../src/wam_srvs/srv/_BHandFingerVel.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_BHandFingerVel.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_BHandFingerVel.py: ../manifest.xml
+../src/wam_srvs/srv/_BHandFingerVel.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandFingerVel.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerVel.srv
+
+../src/wam_srvs/srv/_BHandSpreadVel.py: ../srv/BHandSpreadVel.srv
+../src/wam_srvs/srv/_BHandSpreadVel.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_BHandSpreadVel.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_BHandSpreadVel.py: ../manifest.xml
+../src/wam_srvs/srv/_BHandSpreadVel.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_JointMove.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/JointMove.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandSpreadVel.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadVel.srv
 
 ../src/wam_srvs/srv/_GravityComp.py: ../srv/GravityComp.srv
 ../src/wam_srvs/srv/_GravityComp.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
@@ -126,65 +123,68 @@ CMakeFiles/ROSBUILD_gensrv_py: ../src/wam_srvs/srv/__init__.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_GravityComp.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/GravityComp.srv
 
-../src/wam_srvs/srv/_BHandSpreadVel.py: ../srv/BHandSpreadVel.srv
-../src/wam_srvs/srv/_BHandSpreadVel.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_BHandSpreadVel.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_BHandSpreadVel.py: ../manifest.xml
-../src/wam_srvs/srv/_BHandSpreadVel.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../src/wam_srvs/srv/_BHandGraspPos.py: ../srv/BHandGraspPos.srv
+../src/wam_srvs/srv/_BHandGraspPos.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_BHandGraspPos.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_BHandGraspPos.py: ../manifest.xml
+../src/wam_srvs/srv/_BHandGraspPos.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandSpreadVel.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadVel.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandGraspPos.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspPos.srv
 
-../src/wam_srvs/srv/_BHandFingerVel.py: ../srv/BHandFingerVel.srv
-../src/wam_srvs/srv/_BHandFingerVel.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_BHandFingerVel.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_BHandFingerVel.py: ../manifest.xml
-../src/wam_srvs/srv/_BHandFingerVel.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../src/wam_srvs/srv/_PoseMove.py: ../srv/PoseMove.srv
+../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
+../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
+../src/wam_srvs/srv/_PoseMove.py: ../manifest.xml
+../src/wam_srvs/srv/_PoseMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandFingerVel.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerVel.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_PoseMove.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/PoseMove.srv
 
-../src/wam_srvs/srv/_BHandFingerPos.py: ../srv/BHandFingerPos.srv
-../src/wam_srvs/srv/_BHandFingerPos.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_BHandFingerPos.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_BHandFingerPos.py: ../manifest.xml
-../src/wam_srvs/srv/_BHandFingerPos.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../src/wam_srvs/srv/_CartPosMove.py: ../srv/CartPosMove.srv
+../src/wam_srvs/srv/_CartPosMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_CartPosMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_CartPosMove.py: ../manifest.xml
+../src/wam_srvs/srv/_CartPosMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_BHandFingerPos.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerPos.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_CartPosMove.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/CartPosMove.srv
+
+../src/wam_srvs/srv/_JointMove.py: ../srv/JointMove.srv
+../src/wam_srvs/srv/_JointMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/wam_srvs/srv/_JointMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/wam_srvs/srv/_JointMove.py: ../manifest.xml
+../src/wam_srvs/srv/_JointMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_JointMove.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/JointMove.srv
 
 ../src/wam_srvs/srv/_Hold.py: ../srv/Hold.srv
 ../src/wam_srvs/srv/_Hold.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
 ../src/wam_srvs/srv/_Hold.py: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../src/wam_srvs/srv/_Hold.py: ../manifest.xml
 ../src/wam_srvs/srv/_Hold.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_Hold.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/Hold.srv
 
-../src/wam_srvs/srv/_OrtnMove.py: ../srv/OrtnMove.srv
-../src/wam_srvs/srv/_OrtnMove.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/wam_srvs/srv/_OrtnMove.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/wam_srvs/srv/_OrtnMove.py: ../manifest.xml
-../src/wam_srvs/srv/_OrtnMove.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wam_srvs/srv/_OrtnMove.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/OrtnMove.srv
-
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py
 ROSBUILD_gensrv_py: ../src/wam_srvs/srv/__init__.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_PoseMove.py
 ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandSpreadPos.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandGraspPos.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_OrtnMove.py
 ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandGraspVel.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandFingerPos.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandFingerVel.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandSpreadVel.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_GravityComp.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandGraspPos.py
+ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_PoseMove.py
 ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_CartPosMove.py
 ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_JointMove.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_GravityComp.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandSpreadVel.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandFingerVel.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_BHandFingerPos.py
 ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_Hold.py
-ROSBUILD_gensrv_py: ../src/wam_srvs/srv/_OrtnMove.py
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py.dir/build.make
 .PHONY : ROSBUILD_gensrv_py
 

@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "../src/wam_srvs/srv"
   "../srv_gen"
+  "../src/wam_srvs/srv"
   "../srv_gen"
   "CMakeFiles/ROSBUILD_genmsg_lisp"
 )

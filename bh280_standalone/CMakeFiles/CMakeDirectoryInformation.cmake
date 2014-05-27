@@ -13,9 +13,8 @@ SET(CMAKE_C_INCLUDE_PATH
   "include"
   "/opt/ros/fuerte/include"
   "/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv_gen/cpp/include"
+  "/usr/local/include"
   "/usr/xenomai/include"
-  "/usr/include/xenomai"
-  "/usr/local/include/eigen2"
   "/usr/include/eigen2"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

@@ -42,65 +42,49 @@ CMAKE_BINARY_DIR = /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_comm
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_gensrv_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/PoseMove.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_PoseMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandSpreadPos.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandSpreadPos.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandGraspPos.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/OrtnMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandGraspPos.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandGraspVel.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandGraspVel.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerPos.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerPos.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerVel.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerVel.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandSpreadVel.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/GravityComp.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_GravityComp.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandGraspPos.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandGraspPos.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/PoseMove.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_PoseMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/CartPosMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_CartPosMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/JointMove.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_JointMove.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/GravityComp.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_GravityComp.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandSpreadVel.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerVel.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerVel.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerPos.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerPos.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/Hold.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_Hold.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/OrtnMove.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
-
-../srv_gen/lisp/PoseMove.lisp: ../srv/PoseMove.srv
-../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
-../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
-../srv_gen/lisp/PoseMove.lisp: ../manifest.xml
-../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/PoseMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_PoseMove.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/PoseMove.srv
-
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/PoseMove.lisp
-
-../srv_gen/lisp/_package_PoseMove.lisp: ../srv_gen/lisp/PoseMove.lisp
 
 ../srv_gen/lisp/BHandSpreadPos.lisp: ../srv/BHandSpreadPos.srv
 ../srv_gen/lisp/BHandSpreadPos.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
 ../srv_gen/lisp/BHandSpreadPos.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../srv_gen/lisp/BHandSpreadPos.lisp: ../manifest.xml
 ../srv_gen/lisp/BHandSpreadPos.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandSpreadPos.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandSpreadPos.lisp"
 	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadPos.srv
 
@@ -108,25 +92,25 @@ CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 
 ../srv_gen/lisp/_package_BHandSpreadPos.lisp: ../srv_gen/lisp/BHandSpreadPos.lisp
 
-../srv_gen/lisp/BHandGraspPos.lisp: ../srv/BHandGraspPos.srv
-../srv_gen/lisp/BHandGraspPos.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/BHandGraspPos.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/BHandGraspPos.lisp: ../manifest.xml
-../srv_gen/lisp/BHandGraspPos.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandGraspPos.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandGraspPos.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspPos.srv
+../srv_gen/lisp/OrtnMove.lisp: ../srv/OrtnMove.srv
+../srv_gen/lisp/OrtnMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/OrtnMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/OrtnMove.lisp: ../manifest.xml
+../srv_gen/lisp/OrtnMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/OrtnMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_OrtnMove.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/OrtnMove.srv
 
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandGraspPos.lisp
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/OrtnMove.lisp
 
-../srv_gen/lisp/_package_BHandGraspPos.lisp: ../srv_gen/lisp/BHandGraspPos.lisp
+../srv_gen/lisp/_package_OrtnMove.lisp: ../srv_gen/lisp/OrtnMove.lisp
 
 ../srv_gen/lisp/BHandGraspVel.lisp: ../srv/BHandGraspVel.srv
 ../srv_gen/lisp/BHandGraspVel.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
 ../srv_gen/lisp/BHandGraspVel.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../srv_gen/lisp/BHandGraspVel.lisp: ../manifest.xml
 ../srv_gen/lisp/BHandGraspVel.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandGraspVel.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandGraspVel.lisp"
 	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspVel.srv
 
@@ -134,31 +118,44 @@ CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 
 ../srv_gen/lisp/_package_BHandGraspVel.lisp: ../srv_gen/lisp/BHandGraspVel.lisp
 
-../srv_gen/lisp/CartPosMove.lisp: ../srv/CartPosMove.srv
-../srv_gen/lisp/CartPosMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/CartPosMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/CartPosMove.lisp: ../manifest.xml
-../srv_gen/lisp/CartPosMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../srv_gen/lisp/BHandFingerPos.lisp: ../srv/BHandFingerPos.srv
+../srv_gen/lisp/BHandFingerPos.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/BHandFingerPos.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/BHandFingerPos.lisp: ../manifest.xml
+../srv_gen/lisp/BHandFingerPos.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandFingerPos.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandFingerPos.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerPos.srv
+
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandFingerPos.lisp
+
+../srv_gen/lisp/_package_BHandFingerPos.lisp: ../srv_gen/lisp/BHandFingerPos.lisp
+
+../srv_gen/lisp/BHandFingerVel.lisp: ../srv/BHandFingerVel.srv
+../srv_gen/lisp/BHandFingerVel.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/BHandFingerVel.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/BHandFingerVel.lisp: ../manifest.xml
+../srv_gen/lisp/BHandFingerVel.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/CartPosMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_CartPosMove.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/CartPosMove.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandFingerVel.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandFingerVel.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerVel.srv
 
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/CartPosMove.lisp
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandFingerVel.lisp
 
-../srv_gen/lisp/_package_CartPosMove.lisp: ../srv_gen/lisp/CartPosMove.lisp
+../srv_gen/lisp/_package_BHandFingerVel.lisp: ../srv_gen/lisp/BHandFingerVel.lisp
 
-../srv_gen/lisp/JointMove.lisp: ../srv/JointMove.srv
-../srv_gen/lisp/JointMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/JointMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/JointMove.lisp: ../manifest.xml
-../srv_gen/lisp/JointMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../srv_gen/lisp/BHandSpreadVel.lisp: ../srv/BHandSpreadVel.srv
+../srv_gen/lisp/BHandSpreadVel.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/BHandSpreadVel.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/BHandSpreadVel.lisp: ../manifest.xml
+../srv_gen/lisp/BHandSpreadVel.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/JointMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_JointMove.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/JointMove.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandSpreadVel.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandSpreadVel.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadVel.srv
 
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/JointMove.lisp
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
 
-../srv_gen/lisp/_package_JointMove.lisp: ../srv_gen/lisp/JointMove.lisp
+../srv_gen/lisp/_package_BHandSpreadVel.lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
 
 ../srv_gen/lisp/GravityComp.lisp: ../srv/GravityComp.srv
 ../srv_gen/lisp/GravityComp.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -173,51 +170,67 @@ CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 
 ../srv_gen/lisp/_package_GravityComp.lisp: ../srv_gen/lisp/GravityComp.lisp
 
-../srv_gen/lisp/BHandSpreadVel.lisp: ../srv/BHandSpreadVel.srv
-../srv_gen/lisp/BHandSpreadVel.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/BHandSpreadVel.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/BHandSpreadVel.lisp: ../manifest.xml
-../srv_gen/lisp/BHandSpreadVel.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../srv_gen/lisp/BHandGraspPos.lisp: ../srv/BHandGraspPos.srv
+../srv_gen/lisp/BHandGraspPos.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/BHandGraspPos.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/BHandGraspPos.lisp: ../manifest.xml
+../srv_gen/lisp/BHandGraspPos.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandSpreadVel.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandSpreadVel.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandSpreadVel.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandGraspPos.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandGraspPos.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandGraspPos.srv
 
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandGraspPos.lisp
 
-../srv_gen/lisp/_package_BHandSpreadVel.lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
+../srv_gen/lisp/_package_BHandGraspPos.lisp: ../srv_gen/lisp/BHandGraspPos.lisp
 
-../srv_gen/lisp/BHandFingerVel.lisp: ../srv/BHandFingerVel.srv
-../srv_gen/lisp/BHandFingerVel.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/BHandFingerVel.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/BHandFingerVel.lisp: ../manifest.xml
-../srv_gen/lisp/BHandFingerVel.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../srv_gen/lisp/PoseMove.lisp: ../srv/PoseMove.srv
+../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
+../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
+../srv_gen/lisp/PoseMove.lisp: ../manifest.xml
+../srv_gen/lisp/PoseMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandFingerVel.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandFingerVel.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerVel.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/PoseMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_PoseMove.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/PoseMove.srv
 
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandFingerVel.lisp
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/PoseMove.lisp
 
-../srv_gen/lisp/_package_BHandFingerVel.lisp: ../srv_gen/lisp/BHandFingerVel.lisp
+../srv_gen/lisp/_package_PoseMove.lisp: ../srv_gen/lisp/PoseMove.lisp
 
-../srv_gen/lisp/BHandFingerPos.lisp: ../srv/BHandFingerPos.srv
-../srv_gen/lisp/BHandFingerPos.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/BHandFingerPos.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/BHandFingerPos.lisp: ../manifest.xml
-../srv_gen/lisp/BHandFingerPos.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../srv_gen/lisp/CartPosMove.lisp: ../srv/CartPosMove.srv
+../srv_gen/lisp/CartPosMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/CartPosMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/CartPosMove.lisp: ../manifest.xml
+../srv_gen/lisp/CartPosMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/BHandFingerPos.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_BHandFingerPos.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/BHandFingerPos.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/CartPosMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_CartPosMove.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/CartPosMove.srv
 
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/BHandFingerPos.lisp
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/CartPosMove.lisp
 
-../srv_gen/lisp/_package_BHandFingerPos.lisp: ../srv_gen/lisp/BHandFingerPos.lisp
+../srv_gen/lisp/_package_CartPosMove.lisp: ../srv_gen/lisp/CartPosMove.lisp
+
+../srv_gen/lisp/JointMove.lisp: ../srv/JointMove.srv
+../srv_gen/lisp/JointMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../srv_gen/lisp/JointMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../srv_gen/lisp/JointMove.lisp: ../manifest.xml
+../srv_gen/lisp/JointMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/JointMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_JointMove.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/JointMove.srv
+
+../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/JointMove.lisp
+
+../srv_gen/lisp/_package_JointMove.lisp: ../srv_gen/lisp/JointMove.lisp
 
 ../srv_gen/lisp/Hold.lisp: ../srv/Hold.srv
 ../srv_gen/lisp/Hold.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
 ../srv_gen/lisp/Hold.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../srv_gen/lisp/Hold.lisp: ../manifest.xml
 ../srv_gen/lisp/Hold.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/Hold.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_Hold.lisp"
 	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/Hold.srv
 
@@ -225,56 +238,43 @@ CMakeFiles/ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 
 ../srv_gen/lisp/_package_Hold.lisp: ../srv_gen/lisp/Hold.lisp
 
-../srv_gen/lisp/OrtnMove.lisp: ../srv/OrtnMove.srv
-../srv_gen/lisp/OrtnMove.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../srv_gen/lisp/OrtnMove.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../srv_gen/lisp/OrtnMove.lisp: ../manifest.xml
-../srv_gen/lisp/OrtnMove.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../srv_gen/lisp/OrtnMove.lisp, ../srv_gen/lisp/_package.lisp, ../srv_gen/lisp/_package_OrtnMove.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv/OrtnMove.srv
-
-../srv_gen/lisp/_package.lisp: ../srv_gen/lisp/OrtnMove.lisp
-
-../srv_gen/lisp/_package_OrtnMove.lisp: ../srv_gen/lisp/OrtnMove.lisp
-
 ROSBUILD_gensrv_lisp: CMakeFiles/ROSBUILD_gensrv_lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/PoseMove.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_PoseMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandSpreadPos.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandSpreadPos.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandGraspPos.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/OrtnMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandGraspPos.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandGraspVel.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandGraspVel.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerPos.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerPos.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerVel.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerVel.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandSpreadVel.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/GravityComp.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_GravityComp.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandGraspPos.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandGraspPos.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/PoseMove.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
+ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_PoseMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/CartPosMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_CartPosMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/JointMove.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_JointMove.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/GravityComp.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_GravityComp.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandSpreadVel.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandSpreadVel.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerVel.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerVel.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/BHandFingerPos.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_BHandFingerPos.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/Hold.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
 ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_Hold.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/OrtnMove.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package.lisp
-ROSBUILD_gensrv_lisp: ../srv_gen/lisp/_package_OrtnMove.lisp
 ROSBUILD_gensrv_lisp: CMakeFiles/ROSBUILD_gensrv_lisp.dir/build.make
 .PHONY : ROSBUILD_gensrv_lisp
 

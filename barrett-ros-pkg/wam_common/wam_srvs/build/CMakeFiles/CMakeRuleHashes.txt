@@ -11,7 +11,7 @@ d4bef7858030513c3ee1fd3fd3ec4554 ../src/wam_srvs/srv/_BHandSpreadVel.py
 f855ef3e4cbe0662434388675f3ae765 ../src/wam_srvs/srv/_JointMove.py
 f3967d46bbefa68e3c7e21e8a8b0e3bf ../src/wam_srvs/srv/_OrtnMove.py
 84f6364087aeb30f8833234f4079dcbf ../src/wam_srvs/srv/_PoseMove.py
-a541d9369e66e60f86d9b8d5916fdfc3 ../src/wam_srvs/srv/__init__.py
+7ce7594a9527c06779fae869f1e56d03 ../src/wam_srvs/srv/__init__.py
 52d1fc420368f05b8124af5bce4a5dd6 ../srv_gen/cpp/include/wam_srvs/BHandFingerPos.h
 821d8fc285a7d5b702a676101d01f270 ../srv_gen/cpp/include/wam_srvs/BHandFingerVel.h
 f3f2ff8d06f34385cc80cde2667b8806 ../srv_gen/cpp/include/wam_srvs/BHandGraspPos.h
