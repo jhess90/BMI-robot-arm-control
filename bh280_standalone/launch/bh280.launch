@@ -1,0 +1,4 @@
+<launch>
+  <!-- BHand Node -->
+  <node name="bh280_node" type="bh280_node" pkg="bh280_standalone" output="screen" />
+</launch>
