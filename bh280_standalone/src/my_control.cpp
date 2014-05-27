@@ -167,13 +167,13 @@ void displayEntryPoint(Hand* hand) {
 		} else {
 			switch (line[0]) {
 			case 'c':
-				hand->setTorqueMode();
-				hand->setTorqueCommand(cclose);
+				hand->setTorqueMode(Hand::F1);
+				hand->setTorqueCommand(cclose,Hand::F1);
 				tpState = TEACHING;
 				break;
 			case 'l':
-				hand->setTorqueMode();
-                                hand->setTorqueCommand(cclose1);
+				hand->setTorqueMode(Hand::F1);
+                                hand->setTorqueCommand(cclose1,Hand::F1);
 
 				//loop = true;
 				break;
