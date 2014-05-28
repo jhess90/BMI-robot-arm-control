@@ -86,12 +86,9 @@ my_control_OBJECTS = \
 my_control_EXTERNAL_OBJECTS =
 
 bin/my_control: CMakeFiles/my_control.dir/src/my_control.o
-bin/my_control: /usr/lib/libboost_thread-mt.so
-bin/my_control: /usr/lib/libboost_python.so
 bin/my_control: /usr/xenomai/lib/libnative.so
 bin/my_control: /usr/xenomai/lib/libxenomai.so
 bin/my_control: /usr/xenomai/lib/librtdm.so
-bin/my_control: /usr/lib/libpython2.7.so
 bin/my_control: CMakeFiles/my_control.dir/build.make
 bin/my_control: CMakeFiles/my_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/my_control"

@@ -56,6 +56,7 @@
 #include "std_srvs/Empty.h"
 #include "sensor_msgs/JointState.h"
 #include "geometry_msgs/PoseStamped.h"
+#include "std_msgs/Int32.h"
 
 #include <barrett/math.h> 
 #include <barrett/units.h>
@@ -70,6 +71,16 @@ static const int BHAND_PUBLISH_FREQ = 5; // Publishing Frequency for the BarretH
 static const double SPEED = 0.03; // Default Cartesian Velocity
 
 using namespace barrett;
+
+
+
+// void hand_grip(const std_msgs::Int32 x)
+// {
+//   if(x.data==1)  hand->open();
+//   if(x.data==2)  hand->close();
+// }
+
+
 
 //Creating a templated multiplier for our real-time computation
 template<typename T1, typename T2, typename OutputType>
@@ -199,6 +210,7 @@ template<size_t DOF>
     ros::Subscriber jnt_pos_sub;
     ros::Subscriber cart_pos_sub;
     ros::Subscriber ortn_pos_sub;
+    ros::Subscriber hand_grasp;
 
     //Published Topics
     sensor_msgs::JointState wam_joint_state, bhand_joint_state;
@@ -223,6 +235,8 @@ template<size_t DOF>
     }
     void
     init(ProductManager& pm);
+    void
+    hand_grip(std_msgs::Int32 x);
 
     ~WamNode()
     {
@@ -305,9 +319,9 @@ template<size_t DOF>
 
 
 
-//COMMENT START
 
-/*
+
+
     if (pm.foundHand()) //Does the following only if a BarrettHand is present
     {
       std::cout << "Barrett Hand" << std::endl;
@@ -329,6 +343,9 @@ template<size_t DOF>
       //Publishing the following topics only if there is a BarrettHand present
       bhand_joint_state_pub = nh_.advertise < sensor_msgs::JointState > ("joint_states", 1); // bhand/joint_states
 
+      //Subscribing the following topics only if there is a BarrettHand present
+      hand_grasp = nh_.subscribe("hand_grasp_cmd", 1000, &WamNode::hand_grip, this); // 
+
       //Advertise the following services only if there is a BarrettHand present
       hand_open_grsp_srv = nh_.advertiseService("open_grasp", &WamNode<DOF>::handOpenGrasp, this); // bhand/open_grasp
       hand_close_grsp_srv = nh_.advertiseService("close_grasp", &WamNode::handCloseGrasp, this); // bhand/close_grasp
@@ -349,8 +366,6 @@ template<size_t DOF>
       bhand_joint_state.position.resize(7);
     }
 
-    */
-    //COMMENT HAND END
 
 
 
@@ -387,6 +402,13 @@ template<size_t DOF>
     cart_move_srv = n_.advertiseService("cart_move", &WamNode::cartMove, this); // wam/cart_pos_move
     ortn_move_srv = n_.advertiseService("ortn_move", &WamNode::ortnMove, this); // wam/ortn_move
 
+  }
+
+template<size_t DOF>
+  void WamNode<DOF>::hand_grip(std_msgs::Int32 x)
+  {
+    if(x.data==1)  hand->open();
+    if(x.data==2)  hand->close();    
   }
 
 // gravity_comp service callback

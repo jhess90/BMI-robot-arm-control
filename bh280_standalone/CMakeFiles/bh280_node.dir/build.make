@@ -86,12 +86,9 @@ bh280_node_OBJECTS = \
 bh280_node_EXTERNAL_OBJECTS =
 
 bin/bh280_node: CMakeFiles/bh280_node.dir/src/bh280_node.o
-bin/bh280_node: /usr/lib/libboost_thread-mt.so
-bin/bh280_node: /usr/lib/libboost_python.so
 bin/bh280_node: /usr/xenomai/lib/libnative.so
 bin/bh280_node: /usr/xenomai/lib/libxenomai.so
 bin/bh280_node: /usr/xenomai/lib/librtdm.so
-bin/bh280_node: /usr/lib/libpython2.7.so
 bin/bh280_node: CMakeFiles/bh280_node.dir/build.make
 bin/bh280_node: CMakeFiles/bh280_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/bh280_node"
