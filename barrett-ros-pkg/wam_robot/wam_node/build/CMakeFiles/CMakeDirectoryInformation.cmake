@@ -19,6 +19,7 @@ SET(CMAKE_C_INCLUDE_PATH
   "/opt/ros/fuerte/stacks/geometry/angles/include"
   "/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_msgs/msg_gen/cpp/include"
   "/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv_gen/cpp/include"
+  "../msg_gen/cpp/include"
   "/usr/xenomai/include"
   "/usr/include/xenomai"
   "/usr/local/include/eigen2"

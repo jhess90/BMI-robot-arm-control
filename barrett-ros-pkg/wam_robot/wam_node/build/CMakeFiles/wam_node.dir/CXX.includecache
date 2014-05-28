@@ -483,6 +483,8 @@ sensor_msgs/JointState.h
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/src/sensor_msgs/JointState.h
 geometry_msgs/PoseStamped.h
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/src/geometry_msgs/PoseStamped.h
+std_msgs/Int32.h
+/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/src/std_msgs/Int32.h
 barrett/math.h
 -
 barrett/units.h
@@ -1315,6 +1317,22 @@ std_msgs/Header.h
 -
 
 /opt/ros/fuerte/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/fuerte/include/std_msgs/Int32.h
 string
 -
 vector

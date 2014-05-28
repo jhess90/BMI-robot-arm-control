@@ -1,4 +1,7 @@
 FILE(REMOVE_RECURSE
+  "../src/wam_node/msg"
+  "../msg_gen"
+  "../msg_gen"
   "CMakeFiles/wam_node.dir/src/wam_node.o"
   "../bin/wam_node.pdb"
   "../bin/wam_node"

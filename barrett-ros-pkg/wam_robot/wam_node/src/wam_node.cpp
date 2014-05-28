@@ -57,6 +57,7 @@
 #include "sensor_msgs/JointState.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "std_msgs/Int32.h"
+#include "wam_node/HandPos.h"
 
 #include <barrett/math.h> 
 #include <barrett/units.h>
@@ -238,6 +239,8 @@ template<size_t DOF>
     init(ProductManager& pm);
     void
     hand_grip(std_msgs::Int32 x);
+    void
+    hand_trapz(wam_node::HandPos x);
 
     ~WamNode()
     {
@@ -414,26 +417,26 @@ template<size_t DOF>
   }
 
 template<size_t DOF>
-  void WamNode<DOF>::hand_trapz(std_msgs::Int32 f1,std_msgs::Int32 f2,std_msgs::Int32 f3,std_msgs::Int32 spread)
+  void WamNode<DOF>::hand_trapz(wam_node::HandPos hp)
   {
-    Scale=20000;
+  int Scale=20000;
   typedef Hand::jp_type hjp_t;
-  if(f1>=0)
+  if(hp.f1>=0)
   {
-    hjp_t pos(f1/Scale*2.4);
+    hjp_t pos(hp.f1/Scale*2.4);
     hand->trapezoidalMove(pos, Hand::F1);
   }
-  if(f2>=0)
+  if(hp.f2>=0)
   {
-    hjp_t pos(f2/Scale*2.4);
+    hjp_t pos(hp.f2/Scale*2.4);
     hand->trapezoidalMove(pos, Hand::F2);
   }
-  if(f3>=0)
+  if(hp.f3>=0)
   {
-    hjp_t pos(f3/Scale*2.4);
+    hjp_t pos(hp.f3/Scale*2.4);
     hand->trapezoidalMove(pos, Hand::F3);
   }
-  if(spread>=0)
+  if(hp.spread>=0)
   {
     hjp_t pos(0);
     pos[3]=M_PI;

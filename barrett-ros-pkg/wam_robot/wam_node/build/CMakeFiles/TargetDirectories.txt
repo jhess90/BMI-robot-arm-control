@@ -1,11 +1,13 @@
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/ROSBUILD_genmsg_py.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/clean-test-results.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/rosbuild_precompile.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/rospack_genmsg.dir
+/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/rospack_genmsg_all.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/rospack_genmsg_libexe.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/rospack_gensrv.dir
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles/test.dir

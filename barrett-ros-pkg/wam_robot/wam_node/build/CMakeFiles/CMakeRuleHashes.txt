@@ -1,12 +1,18 @@
 # Hashes of file build rules.
+b590d10c650ab70361e53e4328f8886c ../msg_gen/cpp/include/wam_node/HandPos.h
+66cc102f7e75b60646e0ac66265da046 ../msg_gen/lisp/HandPos.lisp
+d56473aa4f94ceea9d5146093a71ed2e ../src/wam_node/msg/_HandPos.py
+6280ca101c6e1a51d2a06c76a76a8c04 ../src/wam_node/msg/__init__.py
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/ROSBUILD_genmsg_cpp
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/ROSBUILD_genmsg_lisp
+8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/ROSBUILD_genmsg_py
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/ROSBUILD_gensrv_cpp
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/ROSBUILD_gensrv_lisp
 72260f8ed82c63df7aef5af68ec8ed49 CMakeFiles/clean-test-results
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/rosbuild_precompile
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/rosbuild_premsgsrvgen
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/rospack_genmsg
+8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/rospack_genmsg_all
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/rospack_genmsg_libexe
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/rospack_gensrv
 8aff1465c68828de2d93bfe2af5d0302 CMakeFiles/test

@@ -87,6 +87,7 @@ CMakeFiles/wam_node.dir/src/wam_node.o
  /opt/ros/fuerte/include/rosconsole/macros_generated.h
  /opt/ros/fuerte/include/sensor_msgs/JointState.h
  /opt/ros/fuerte/include/std_msgs/Header.h
+ /opt/ros/fuerte/include/std_msgs/Int32.h
  /opt/ros/fuerte/include/std_srvs/Empty.h
  /opt/ros/fuerte/include/std_srvs/EmptyRequest.h
  /opt/ros/fuerte/include/std_srvs/EmptyResponse.h

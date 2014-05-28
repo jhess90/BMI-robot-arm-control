@@ -86,6 +86,7 @@ CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/ros/wall_timer_o
 CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/rosconsole/macros_generated.h
 CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/sensor_msgs/JointState.h
 CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/std_msgs/Header.h
+CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/std_msgs/Int32.h
 CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/std_srvs/Empty.h
 CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/std_srvs/EmptyRequest.h
 CMakeFiles/wam_node.dir/src/wam_node.o: /opt/ros/fuerte/include/std_srvs/EmptyResponse.h

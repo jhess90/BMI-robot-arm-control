@@ -42,9 +42,38 @@ CMAKE_BINARY_DIR = /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robo
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_cpp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_cpp:
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wam_node/HandPos.h
+
+../msg_gen/cpp/include/wam_node/HandPos.h: ../msg/HandPos.msg
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/roslib/bin/gendeps
+../msg_gen/cpp/include/wam_node/HandPos.h: ../manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/std_msgs/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/std_srvs/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/roslang/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/roscpp/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/stacks/bullet/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/rosconsole/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/rospy/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/rostest/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/roswtf/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/share/message_filters/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_msgs/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/manifest.xml
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
+../msg_gen/cpp/include/wam_node/HandPos.h: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+../msg_gen/cpp/include/wam_node/HandPos.h: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_msgs/msg_gen/generated
+../msg_gen/cpp/include/wam_node/HandPos.h: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/wam_node/HandPos.h"
+	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/msg/HandPos.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wam_node/HandPos.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
 
