@@ -303,6 +303,11 @@ template<size_t DOF>
     ROS_INFO(" \n %zu-DOF WAM", DOF);
     jp_home = wam.getJointPositions();
 
+
+
+//COMMENT START
+
+/*
     if (pm.foundHand()) //Does the following only if a BarrettHand is present
     {
       std::cout << "Barrett Hand" << std::endl;
@@ -343,6 +348,11 @@ template<size_t DOF>
       bhand_joint_state.name = bhand_joints;
       bhand_joint_state.position.resize(7);
     }
+
+    */
+    //COMMENT HAND END
+
+
 
     wam.gravityCompensate(true); // Turning on Gravity Compenstation by Default when starting the WAM Node
 

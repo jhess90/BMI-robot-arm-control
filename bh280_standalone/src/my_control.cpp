@@ -15,6 +15,20 @@
 #include <boost/tuple/tuple.hpp>
 #include <boost/thread.hpp>
 
+
+#include "ros/ros.h"
+
+#include "wam_srvs/BHandFingerPos.h"
+#include "wam_srvs/BHandGraspPos.h"
+#include "wam_srvs/BHandSpreadPos.h"
+#include "wam_srvs/BHandFingerVel.h"
+#include "wam_srvs/BHandGraspVel.h"
+#include "wam_srvs/BHandSpreadVel.h"
+#include "std_srvs/Empty.h"
+#include "sensor_msgs/JointState.h"
+
+
+
 #include <barrett/detail/stl_utils.h>  // waitForEnter()
 #include <barrett/math.h>
 #include <barrett/units.h>
@@ -24,6 +38,8 @@
 
 #include <barrett/standard_main_function.h>
 
+
+static const int PUBLISH_FREQ = 50; // Default Control Loop / Publishing Frequency
 
 using namespace barrett;
 using detail::waitForEnter;
@@ -167,13 +183,13 @@ void displayEntryPoint(Hand* hand) {
 		} else {
 			switch (line[0]) {
 			case 'c':
-				hand->setTorqueMode(Hand::F1);
-				hand->setTorqueCommand(cclose,Hand::F1);
+				hand->setTorqueMode();
+				hand->setTorqueCommand(cclose);
 				tpState = TEACHING;
 				break;
 			case 'l':
-				hand->setTorqueMode(Hand::F1);
-                                hand->setTorqueCommand(cclose1,Hand::F1);
+				hand->setTorqueMode();
+                                hand->setTorqueCommand(cclose1);
 
 				//loop = true;
 				break;
