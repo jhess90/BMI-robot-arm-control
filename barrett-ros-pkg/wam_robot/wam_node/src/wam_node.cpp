@@ -211,6 +211,7 @@ template<size_t DOF>
     ros::Subscriber cart_pos_sub;
     ros::Subscriber ortn_pos_sub;
     ros::Subscriber hand_grasp;
+    ros::Subscriber hand_trapz_cmd;
 
     //Published Topics
     sensor_msgs::JointState wam_joint_state, bhand_joint_state;
@@ -345,6 +346,7 @@ template<size_t DOF>
 
       //Subscribing the following topics only if there is a BarrettHand present
       hand_grasp = nh_.subscribe("hand_grasp_cmd", 1000, &WamNode::hand_grip, this); // 
+      hand_trapz_cmd = nh_.subscribe("hand_trapz_cmd", 1000, &WamNode::hand_trapz, this); // 
 
       //Advertise the following services only if there is a BarrettHand present
       hand_open_grsp_srv = nh_.advertiseService("open_grasp", &WamNode<DOF>::handOpenGrasp, this); // bhand/open_grasp
@@ -409,6 +411,35 @@ template<size_t DOF>
   {
     if(x.data==1)  hand->open();
     if(x.data==2)  hand->close();    
+  }
+
+template<size_t DOF>
+  void WamNode<DOF>::hand_trapz(std_msgs::Int32 f1,std_msgs::Int32 f2,std_msgs::Int32 f3,std_msgs::Int32 spread)
+  {
+    Scale=20000;
+  typedef Hand::jp_type hjp_t;
+  if(f1>=0)
+  {
+    hjp_t pos(f1/Scale*2.4);
+    hand->trapezoidalMove(pos, Hand::F1);
+  }
+  if(f2>=0)
+  {
+    hjp_t pos(f2/Scale*2.4);
+    hand->trapezoidalMove(pos, Hand::F2);
+  }
+  if(f3>=0)
+  {
+    hjp_t pos(f3/Scale*2.4);
+    hand->trapezoidalMove(pos, Hand::F3);
+  }
+  if(spread>=0)
+  {
+    hjp_t pos(0);
+    pos[3]=M_PI;
+    hand->trapezoidalMove(pos, Hand::SPREAD);
+  }
+  
   }
 
 // gravity_comp service callback
