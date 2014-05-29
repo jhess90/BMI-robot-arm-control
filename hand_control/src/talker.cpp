@@ -68,10 +68,10 @@ std::cout<<"3333";ROS_INFO("3");
      */
 //  
     wam_node::HandPos msg;
-    msg.f1=1;
-    msg.f2=1;
-    msg.f3=1;
-    msg.spread=1;
+    msg.f1=5000;
+    msg.f2=5000;
+    msg.f3=5000;
+    msg.spread=1000;
     chatter_pub.publish(msg);
 
     ros::spinOnce();
