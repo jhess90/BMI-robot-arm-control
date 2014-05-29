@@ -148,19 +148,6 @@ ROSBUILD_gensrv_lisp/fast:
 .PHONY : ROSBUILD_gensrv_lisp/fast
 
 #=============================================================================
-# Target rules for targets named bh280_node
-
-# Build rule for target.
-bh280_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bh280_node
-.PHONY : bh280_node
-
-# fast build rule for target.
-bh280_node/fast:
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/build
-.PHONY : bh280_node/fast
-
-#=============================================================================
 # Target rules for targets named clean-test-results
 
 # Build rule for target.
@@ -239,6 +226,19 @@ rospack_gensrv/fast:
 .PHONY : rospack_gensrv/fast
 
 #=============================================================================
+# Target rules for targets named talker
+
+# Build rule for target.
+talker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 talker
+.PHONY : talker
+
+# fast build rule for target.
+talker/fast:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
+.PHONY : talker/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -304,19 +304,19 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
-src/bh280_node.o:
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/src/bh280_node.o
-.PHONY : src/bh280_node.o
+src/talker.o:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.o
+.PHONY : src/talker.o
 
 # target to preprocess a source file
-src/bh280_node.i:
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/src/bh280_node.i
-.PHONY : src/bh280_node.i
+src/talker.i:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.i
+.PHONY : src/talker.i
 
 # target to generate assembly for a file
-src/bh280_node.s:
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/src/bh280_node.s
-.PHONY : src/bh280_node.s
+src/talker.s:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.s
+.PHONY : src/talker.s
 
 # Help Target
 help:
@@ -328,7 +328,6 @@ help:
 	@echo "... ROSBUILD_genmsg_lisp"
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_lisp"
-	@echo "... bh280_node"
 	@echo "... clean-test-results"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
@@ -337,14 +336,15 @@ help:
 	@echo "... rospack_genmsg"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
+	@echo "... talker"
 	@echo "... test"
 	@echo "... test-future"
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
-	@echo "... src/bh280_node.o"
-	@echo "... src/bh280_node.i"
-	@echo "... src/bh280_node.s"
+	@echo "... src/talker.o"
+	@echo "... src/talker.i"
+	@echo "... src/talker.s"
 .PHONY : help
 
 

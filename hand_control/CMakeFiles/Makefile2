@@ -174,41 +174,6 @@ clean: CMakeFiles/ROSBUILD_gensrv_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/bh280_node.dir
-
-# All Build rule for target.
-CMakeFiles/bh280_node.dir/all: CMakeFiles/rosbuild_precompile.dir/all
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/depend
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles  1
-	@echo "Built target bh280_node"
-.PHONY : CMakeFiles/bh280_node.dir/all
-
-# Include target in all.
-all: CMakeFiles/bh280_node.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/bh280_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bh280_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles 0
-.PHONY : CMakeFiles/bh280_node.dir/rule
-
-# Convenience name for target.
-bh280_node: CMakeFiles/bh280_node.dir/rule
-.PHONY : bh280_node
-
-# clean rule for target.
-CMakeFiles/bh280_node.dir/clean:
-	$(MAKE) -f CMakeFiles/bh280_node.dir/build.make CMakeFiles/bh280_node.dir/clean
-.PHONY : CMakeFiles/bh280_node.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/bh280_node.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/clean-test-results.dir
 
 # All Build rule for target.
@@ -394,6 +359,41 @@ CMakeFiles/rospack_gensrv.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/rospack_gensrv.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/talker.dir
+
+# All Build rule for target.
+CMakeFiles/talker.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles  1
+	@echo "Built target talker"
+.PHONY : CMakeFiles/talker.dir/all
+
+# Include target in all.
+all: CMakeFiles/talker.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/talker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/talker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles 0
+.PHONY : CMakeFiles/talker.dir/rule
+
+# Convenience name for target.
+talker: CMakeFiles/talker.dir/rule
+.PHONY : talker
+
+# clean rule for target.
+CMakeFiles/talker.dir/clean:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/clean
+.PHONY : CMakeFiles/talker.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/talker.dir/clean
 .PHONY : clean
 
 #=============================================================================

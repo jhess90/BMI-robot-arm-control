@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../msg_gen/cpp/include/wam_node/HandPos.h
+string
+-
+vector
+-
+map
+-
+ostream
+-
+ros/serialization.h
+../msg_gen/cpp/include/wam_node/ros/serialization.h
+ros/builtin_message_traits.h
+../msg_gen/cpp/include/wam_node/ros/builtin_message_traits.h
+ros/message_operations.h
+../msg_gen/cpp/include/wam_node/ros/message_operations.h
+ros/time.h
+../msg_gen/cpp/include/wam_node/ros/time.h
+ros/macros.h
+../msg_gen/cpp/include/wam_node/ros/macros.h
+ros/assert.h
+../msg_gen/cpp/include/wam_node/ros/assert.h
+
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_msgs/msg_gen/cpp/include/wam_msgs/RTCartPos.h
 string
 -
@@ -485,6 +507,8 @@ geometry_msgs/PoseStamped.h
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/src/geometry_msgs/PoseStamped.h
 std_msgs/Int32.h
 /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/src/std_msgs/Int32.h
+wam_node/HandPos.h
+/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/src/wam_node/HandPos.h
 barrett/math.h
 -
 barrett/units.h

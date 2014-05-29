@@ -2,13 +2,13 @@
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/ROSBUILD_genmsg_lisp.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/ROSBUILD_gensrv_lisp.dir
-/home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/bh280_node.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/clean-test-results.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/rosbuild_precompile.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/rospack_genmsg.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/rospack_genmsg_libexe.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/rospack_gensrv.dir
+/home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/talker.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/test.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/test-future.dir
 /home/robot/fuerte_workspace/sandbox/hand_control/CMakeFiles/test-results.dir

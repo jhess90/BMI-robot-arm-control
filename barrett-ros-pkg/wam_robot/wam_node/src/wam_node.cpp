@@ -419,6 +419,7 @@ template<size_t DOF>
 template<size_t DOF>
   void WamNode<DOF>::hand_trapz(wam_node::HandPos hp)
   {
+    ROS_INFO("hehe");
   int Scale=20000;
   typedef Hand::jp_type hjp_t;
   if(hp.f1>=0)

@@ -29,5 +29,6 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #rosbuild_link_boost(${PROJECT_NAME} thread)
 #rosbuild_add_executable(my_control src/my_control.cpp) -----for my_control use make in src directory
 #target_link_libraries(example ${PROJECT_NAME})
-rosbuild_add_executable(bh280_node src/bh280_node.cpp)
+#rosbuild_add_executable(bh280_node src/bh280_node.cpp)
+rosbuild_add_executable(talker src/talker.cpp)
 

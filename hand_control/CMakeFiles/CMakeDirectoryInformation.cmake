@@ -11,6 +11,7 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "include"
+  "/home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/msg_gen/cpp/include"
   "/opt/ros/fuerte/include"
   "/opt/ros/fuerte/stacks/bullet/include"
   "/opt/ros/fuerte/stacks/geometry/tf/include"
