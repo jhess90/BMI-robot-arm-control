@@ -422,10 +422,14 @@ template<size_t DOF>
     ROS_INFO("hehe");
   int Scale=20000;
   typedef Hand::jp_type hjp_t;
+  ROS_INFO("hehe 3");
   if(hp.f1>=0)
   {
+    ROS_INFO("hehe 1");
     hjp_t pos(hp.f1/Scale*2.4);
+    ROS_INFO("hehe 4");
     hand->trapezoidalMove(pos, Hand::F1);
+    ROS_INFO("hehe 5");
   }
   if(hp.f2>=0)
   {
