@@ -443,7 +443,7 @@ template<size_t DOF>
   }
   if(hp.spread>=0)
   {ROS_INFO("hehe 8");
-    hjp_t pos(0);ROS_INFO("hehe 11");
+    hjp_t pos(0.0);ROS_INFO("hehe 11");
     pos[3]=hp.spread/Scale*M_PI;ROS_INFO("hehe 12");
     hand->trapezoidalMove(pos, Hand::SPREAD, false);ROS_INFO("hehe 13");
   }
