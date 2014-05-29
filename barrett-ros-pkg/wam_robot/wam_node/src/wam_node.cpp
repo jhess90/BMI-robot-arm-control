@@ -241,6 +241,8 @@ template<size_t DOF>
     hand_grip(std_msgs::Int32 x);
     void
     hand_trapz(wam_node::HandPos x);
+    bool
+    assertPosition(Hand* hand, Hand::jp_type innerLinkJp, double tolerance);
 
     ~WamNode()
     {
@@ -447,6 +449,16 @@ template<size_t DOF>
   }
   //ROS_INFO("hehe 9");
   }
+template<size_t DOF>  
+  bool WamNode<DOF>::assertPosition(Hand* hand, Hand::jp_type innerLinkJp, double tolerance = 0.05) {
+        hand->update();
+        if (math::abs(hand->getInnerLinkPosition() - innerLinkJp).maxCoeff() > tolerance) {
+                std::cout << hand->getInnerLinkPosition() << " is not close enough to " << innerLinkJp << "\n";
+                return false;
+        }
+        else return true;
+}
+
 
 // gravity_comp service callback
 template<size_t DOF>
