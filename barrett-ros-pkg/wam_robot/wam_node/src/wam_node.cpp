@@ -432,22 +432,22 @@ template<size_t DOF>
     ROS_INFO("hehe 5");
   }
   if(hp.f2>=0)
-  {
+  {ROS_INFO("hehe 6");
     hjp_t pos(hp.f2/Scale*2.4);
     hand->trapezoidalMove(pos, Hand::F2);
   }
   if(hp.f3>=0)
-  {
+  {ROS_INFO("hehe 7");
     hjp_t pos(hp.f3/Scale*2.4);
     hand->trapezoidalMove(pos, Hand::F3);
   }
   if(hp.spread>=0)
-  {
+  {ROS_INFO("hehe ");
     hjp_t pos(0);
-    pos[3]=M_PI;
+    pos[3]=hp.spread/Scale*M_PI;
     hand->trapezoidalMove(pos, Hand::SPREAD);
   }
-  
+  ROS_INFO("hehe 9");
   }
 
 // gravity_comp service callback
