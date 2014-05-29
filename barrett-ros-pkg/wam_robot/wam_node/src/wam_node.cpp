@@ -419,35 +419,33 @@ template<size_t DOF>
 template<size_t DOF>
   void WamNode<DOF>::hand_trapz(wam_node::HandPos hp)
   {
-    ROS_INFO("hehe");
+  //ROS_INFO("hehe");
   double Scale=20000.0;
   typedef Hand::jp_type hjp_t;
-  ROS_INFO("hehe 3");
+  //ROS_INFO("hehe 3");
   if(hp.f1>=0)
   {
-    ROS_INFO("hehe 1");
     hjp_t pos((double)(hp.f1/Scale*2.4));
-    ROS_INFO("hehe 4");
     hand->trapezoidalMove(pos, Hand::F1, false);
-    ROS_INFO("hehe 5");
+    
   }
   if(hp.f2>=0)
-  {ROS_INFO("hehe 6");
+  {//ROS_INFO("hehe 6");
     hjp_t pos((double)(hp.f2/Scale*2.4));
     hand->trapezoidalMove(pos, Hand::F2, false);
   }
   if(hp.f3>=0)
-  {ROS_INFO("hehe 7");
+  {//ROS_INFO("hehe 7");
     hjp_t pos((double)(hp.f3/Scale*2.4));
     hand->trapezoidalMove(pos, Hand::F3, false);
   }
   if(hp.spread>=0)
-  {ROS_INFO("hehe 8");
-    hjp_t pos((double)0.0);ROS_INFO("hehe 11");
-    pos[3]=(double)(hp.spread/Scale*M_PI);ROS_INFO("%f",&pos[3]);
-    hand->trapezoidalMove(pos, Hand::SPREAD, false);ROS_INFO("hehe 13");
+  {//ROS_INFO("hehe 8");
+    hjp_t pos((double)0.0);//ROS_INFO("hehe 11");
+    pos[3]=(double)(hp.spread/Scale*M_PI);//ROS_INFO("%f",&pos[3]);
+    hand->trapezoidalMove(pos, Hand::SPREAD, false);//ROS_INFO("hehe 13");
   }
-  ROS_INFO("hehe 9");
+  //ROS_INFO("hehe 9");
   }
 
 // gravity_comp service callback
