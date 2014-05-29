@@ -426,25 +426,25 @@ template<size_t DOF>
   if(hp.f1>=0)
   {
     ROS_INFO("hehe 1");
-    hjp_t pos(hp.f1/Scale*2.4);
+    hjp_t pos((double)(hp.f1/Scale*2.4));
     ROS_INFO("hehe 4");
     hand->trapezoidalMove(pos, Hand::F1);
     ROS_INFO("hehe 5");
   }
   if(hp.f2>=0)
   {ROS_INFO("hehe 6");
-    hjp_t pos(hp.f2/Scale*2.4);
+    hjp_t pos((double)(hp.f2/Scale*2.4));
     hand->trapezoidalMove(pos, Hand::F2);
   }
   if(hp.f3>=0)
   {ROS_INFO("hehe 7");
-    hjp_t pos(hp.f3/Scale*2.4);
+    hjp_t pos((double)(hp.f3/Scale*2.4));
     hand->trapezoidalMove(pos, Hand::F3);
   }
   if(hp.spread>=0)
   {ROS_INFO("hehe 8");
-    hjp_t pos(0.0);ROS_INFO("hehe 11");
-    pos[3]=hp.spread/Scale*M_PI;ROS_INFO("hehe 12");
+    hjp_t pos((double)0.0);ROS_INFO("hehe 11");
+    pos[3]=(double)(hp.spread/Scale*M_PI);ROS_INFO("%f",&pos[3]);
     hand->trapezoidalMove(pos, Hand::SPREAD);ROS_INFO("hehe 13");
   }
   ROS_INFO("hehe 9");
