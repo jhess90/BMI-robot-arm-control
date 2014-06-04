@@ -25,21 +25,22 @@ def talker():
     while not rospy.is_shutdown():
 
         #cart_pos_pub.publish(cart_pos_msg(t))
-        #joint_pos_pub.publish(joint_pos_msg())
-        joint_vel_pub.publish(joint_vel_msg())
+        joint_pos_pub.publish(joint_pos_msg(t))
+        #joint_vel_pub.publish(joint_vel_msg(t))
         t=t+0.1
         rospy.loginfo(t)
         r.sleep()
 
 
-def joint_pos_msg():
-    msg = RTJointPos([1.0,1.0,1.0,1.0,1.0,1.0,1.0],[0.5,0.5,0.5,0.5,0.5,0.5,0.5])
+def joint_pos_msg(t):
+
+    msg = RTJointPos([math.sin(t/5),3.1416/2,3.1416/2,math.cos(t/5),0.0,3.1416/2,0.0],[0.5,0.5,0.5,0.5,0.5,0.5,0.5])
     
     return msg
 
 
-def joint_vel_msg():
-    msg = RTJointVel([0.1,0.1,0.1,0.1,0.1,0.1,0.1])
+def joint_vel_msg(t):
+    msg = RTJointVel([0.4*math.sin(t/5),0.0,0.0,0.4*math.cos(t/5),0.0,0.0,0.0])
     
     return msg
 
