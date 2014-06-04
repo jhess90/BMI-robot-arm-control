@@ -70,6 +70,7 @@ CMakeFiles/posi.dir/src/posi.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/gener
 CMakeFiles/posi.dir/src/posi.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
 CMakeFiles/posi.dir/src/posi.o: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_msgs/msg_gen/generated
 CMakeFiles/posi.dir/src/posi.o: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_common/wam_srvs/srv_gen/generated
+CMakeFiles/posi.dir/src/posi.o: /home/robot/fuerte_workspace/sandbox/barrett-ros-pkg/wam_robot/wam_node/msg_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/robot/fuerte_workspace/sandbox/wam_control/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/posi.dir/src/posi.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/posi.dir/src/posi.o -c /home/robot/fuerte_workspace/sandbox/wam_control/src/posi.cpp

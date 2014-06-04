@@ -68,9 +68,9 @@ std::cout<<"3333";ROS_INFO("3");
      */
 //  
     wam_node::HandPos msg;
-    msg.f1=5000*sin(6.28*50*count)+5000;
-    msg.f2=5000*sin(6.28*50*count+1.6)+5000;
-    msg.f3=5000*sin(6.28*50*count-1.6)+5000;
+    msg.f1=5000*sin(6.28*100*count)+5000;
+    msg.f2=5000*sin(6.28*100*count+1.6)+5000;
+    msg.f3=5000*sin(6.28*100*count-1.6)+5000;
     msg.spread=1000;
     chatter_pub.publish(msg);
 

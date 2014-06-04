@@ -11,7 +11,7 @@
  */
 int main(int argc, char **argv)
 {
-std::cout<<"6666";ROS_INFO("6");
+//std::cout<<"6666";ROS_INFO("6");
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line. For programmatic
@@ -30,7 +30,7 @@ std::cout<<"6666";ROS_INFO("6");
    * NodeHandle destructed will close down the node.
    */
   ros::NodeHandle n;
-//  ros::NodeHandle n1;
+  ros::NodeHandle cart_h;
 
   /**
    * The advertise() function is how you tell ROS that you want to
@@ -49,12 +49,12 @@ std::cout<<"6666";ROS_INFO("6");
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-std::cout<<"1111";ROS_INFO("1");
+//std::cout<<"1111";ROS_INFO("1");
   ros::Publisher chatter_pub = n.advertise<wam_msgs::RTJointPos>("/wam/jnt_pos_cmd", 1000);
-//  ros::Publisher chatter_pub1 = n1.advertise<wam_msgs::RTCartPos>("/wam/cart_pos_cmd", 1000);
-std::cout<<"2222";ROS_INFO("2");
+  ros::Publisher Cart_pub = cart_h.advertise<wam_msgs::RTCartPos>("/wam/cart_pos_cmd", 1000);
+//std::cout<<"2222";ROS_INFO("2");
   ros::Rate loop_rate(10);
-std::cout<<"3333";ROS_INFO("3");
+//std::cout<<"3333";ROS_INFO("3");
   /**
    * A count of how many messages we have sent. This is used to create
    * a unique string for each message.
@@ -67,38 +67,38 @@ std::cout<<"3333";ROS_INFO("3");
      */
 //    _msgs::String msg;
     wam_msgs::RTJointPos msg1;
-  //  wam_msgs::RTCartPos  msg2;
+    wam_msgs::RTCartPos  msg2;
     msg1.joints.resize(7);
     msg1.rate_limits.resize(7);
 
 
 //    ss << "hello world " << count;
 //    msg.data = ss.str();
-std::cout<<"4444";ROS_INFO("4");
-ROS_INFO("%d",(CHAR_BIT * sizeof (float)));
-ROS_INFO("66");
-    msg1.joints[0]=0.5;//{0.5,0.5,0.5,0.5,0.5,0.5,0.5};
-    msg1.joints[1] = 0.5;
-    msg1.joints[2] = 0.5;
-    msg1.joints[3] = 0.5;
-    msg1.joints[4] = 0.5;
-    msg1.joints[5] = 0.5;
-    msg1.joints[6] = 0.5;
+//std::cout<<"4444";ROS_INFO("4");
+//ROS_INFO("%d",(CHAR_BIT * sizeof (float)));
+//ROS_INFO("66");
+    msg1.joints[0] = 0.0;//{0.5,0.5,0.5,0.5,0.5,0.5,0.5};
+    msg1.joints[1] = 0.0;
+    msg1.joints[2] = 0.0;
+    msg1.joints[3] = 3.0;
+    msg1.joints[4] = 0.0;
+    msg1.joints[5] = 3.0;
+    msg1.joints[6] = 3.0;
 
-    msg1.rate_limits[0]=0.10;//{0.5,0.5,0.5,0.5,0.5,0.5,0.5};
-    msg1.rate_limits[1] = 0.10;
-    msg1.rate_limits[2] = 0.10;
-    msg1.rate_limits[3] = 0.10;
-    msg1.rate_limits[4] = 0.10;
-    msg1.rate_limits[5] = 0.10;
-    msg1.rate_limits[6] = 0.10;
+    msg1.rate_limits[0] = 0.50;//{0.5,0.5,0.5,0.5,0.5,0.5,0.5};
+    msg1.rate_limits[1] = 0.50;
+    msg1.rate_limits[2] = 0.50;
+    msg1.rate_limits[3] = 0.50;
+    msg1.rate_limits[4] = 0.50;
+    msg1.rate_limits[5] = 0.50;
+    msg1.rate_limits[6] = 0.50;
 
-//msg2.position[0]=1;//0.5-0.1*(count%10);
-//msg2.position[1]=1;//0.5-0.1*(count%10);
-//msg2.position[2]=1;//0.5;
-//msg2.rate_limits[0]=0.5;
-//msg2.rate_limits[1]=0.5;
-//msg2.rate_limits[2]=0.5;
+    msg2.position[0] = 0.5;//0.5-0.1*(count%10);
+    msg2.position[1] = 0.5;//0.5-0.1*(count%10);
+    msg2.position[2] = 0.5;//0.5;
+    msg2.rate_limits[0] = 0.1;
+    msg2.rate_limits[1] = 0.1;
+    msg2.rate_limits[2] = 0.1;
     ROS_INFO("5");
 
     /**
@@ -108,8 +108,8 @@ ROS_INFO("66");
      * in the constructor above.
      */
 
-    chatter_pub.publish(msg1);
-
+    //chatter_pub.publish(msg1);
+    Cart_pub.publish(msg2);
     ros::spinOnce();
 
     loop_rate.sleep();
