@@ -34,7 +34,8 @@ def talker():
 
 def joint_pos_msg(t):
 
-    msg = RTJointPos([math.sin(t/5),3.1416/2,3.1416/2,math.cos(t/5),0.0,3.1416/2,0.0],[0.5,0.5,0.5,0.5,0.5,0.5,0.5])
+    msg = RTJointPos([math.sin(t/5),3.1416/2,3.1416/2,math.cos(t/5),0.0,3.1416/2,0.0],[0.2*abs(math.cos(t/5)),0.2,0.2,0.2*abs(math.sin(t/5)),0.2,0.2,0.2])
+    #msg = RTJointPos([0,3.1416/2,3.1416/2,0,0.0,3.1416/2,0.0],[0.2,0.2,0.2,0.2,0.2,0.2,0.2])
     
     return msg
 
