@@ -215,7 +215,7 @@ template<size_t DOF>
     ros::Subscriber ortn_pos_sub;
     ros::Subscriber hand_grasp;
     ros::Subscriber hand_trapz_cmd;
-    //ros::Subscriber hand_pos_vel_cmd;
+    ros::Subscriber hand_pos_vel_cmd;
 
     //Published Topics
     sensor_msgs::JointState wam_joint_state, bhand_joint_state;
@@ -359,7 +359,7 @@ template<size_t DOF>
       //Subscribing the following topics only if there is a BarrettHand present
       hand_grasp = nh_.subscribe("hand_grasp_cmd", 1000, &WamNode::hand_grip, this); // 
       hand_trapz_cmd = nh_.subscribe("hand_trapz_cmd", 1000, &WamNode::hand_trapz, this); // 
-      //hand_pos_vel_cmd = nh_.subscribe("hand_pos_vel_cmd", 1000, &WamNode::hand_pos_vel, this); // 
+      hand_pos_vel_cmd = nh_.subscribe("hand_pos_vel_cmd", 1000, &WamNode::hand_pos_vel, this); // 
 
       //Advertise the following services only if there is a BarrettHand present
       hand_open_grsp_srv = nh_.advertiseService("open_grasp", &WamNode<DOF>::handOpenGrasp, this); // bhand/open_grasp
@@ -457,6 +457,8 @@ template<size_t DOF>
   }
   //ROS_INFO("hehe 9");
   }
+
+
 template<size_t DOF>
   void WamNode<DOF>::hand_pos_vel(wam_node::HandPosVel hpv)
   {
