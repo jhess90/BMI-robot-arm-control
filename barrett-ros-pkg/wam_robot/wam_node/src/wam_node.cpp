@@ -28,6 +28,7 @@
 
 #include <unistd.h>
 #include <math.h>
+#include <vactor>
 
 #include <boost/thread.hpp> // BarrettHand threading
 #include <boost/bind.hpp>
@@ -241,6 +242,8 @@ template<size_t DOF>
     hand_grip(std_msgs::Int32 x);
     void
     hand_trapz(wam_node::HandPos x);
+    void
+    hand_vel_pos(wam_node::HandPos x);
     bool
     assertPosition(Hand* hand, Hand::jp_type innerLinkJp, double tolerance);
 
@@ -352,6 +355,7 @@ template<size_t DOF>
       //Subscribing the following topics only if there is a BarrettHand present
       hand_grasp = nh_.subscribe("hand_grasp_cmd", 1000, &WamNode::hand_grip, this); // 
       hand_trapz_cmd = nh_.subscribe("hand_trapz_cmd", 1000, &WamNode::hand_trapz, this); // 
+      hand_pos_vel_cmd = nh_.subscribe("hand_pos_vel_cmd", 1000, &WamNode::hand_pos_vel, this); // 
 
       //Advertise the following services only if there is a BarrettHand present
       hand_open_grsp_srv = nh_.advertiseService("open_grasp", &WamNode<DOF>::handOpenGrasp, this); // bhand/open_grasp
@@ -449,6 +453,51 @@ template<size_t DOF>
   }
   //ROS_INFO("hehe 9");
   }
+template<size_t DOF>
+  void WamNode<DOF>::hand_pos_vel(wam_node::HandPosVel hpv)
+  {
+
+      double OR = -0.75;
+      double CR = 0.75;
+      Hand::jv_type opening(OR);
+      Hand::jv_type closing(CR);
+      Hand::jp_type pos((double)0.0);
+      pos[0] = hpv.joints[0]
+      pos[1] = hpv.joints[1]
+      pos[2] = hpv.joints[2]
+      pos[3] = hpv.joints[3]
+      int hz = hpv.hz
+
+
+
+
+      hand->velocityMove(opening, Hand::GRASP);
+      if(hp.f1>=0)
+      {
+        hjp_t pos((double)(hp.f1/Scale*2.4));
+        hand->velocityMove(opening, Hand::F1);
+        
+      }
+      if(hp.f2>=0)
+      {//ROS_INFO("hehe 6");
+        hjp_t pos((double)(hp.f2/Scale*2.4));
+        hand->velocityMove(opening, Hand::F2);
+      }
+      if(hp.f3>=0)
+      {//ROS_INFO("hehe 7");
+        hjp_t pos((double)(hp.f3/Scale*2.4));
+        hand->velocityMove(opening, Hand::F3);
+      }
+      if(hp.spread>=0)
+      {//ROS_INFO("hehe 8");
+        hjp_t pos((double)0.0);//ROS_INFO("hehe 11");
+        pos[3]=(double)(hp.spread/Scale*M_PI);//ROS_INFO("%f",&pos[3]);
+        hand->velocityMove(opening, Hand::SPREAD);
+      }
+      assertPosition(hand, hjp_t(CR*t), 0.2);
+  }
+
+
 template<size_t DOF>  
   bool WamNode<DOF>::assertPosition(Hand* hand, Hand::jp_type innerLinkJp, double tolerance = 0.05) {
         hand->update();
@@ -457,6 +506,24 @@ template<size_t DOF>
                 return false;
         }
         else return true;
+}
+
+template<size_t DOF>  
+  std::vector<Hand::jv_type> WamNode<DOF>::Calc_Rate(Hand* hand, Hand::jp_type innerLinkJp, int hz) {
+    
+    std::vector<Hand::jv_type> rate;
+    double time_diff = 1.0/hz;
+    
+    hand->update();
+    Hand::jp_type pos_diff = innerLinkJp - hand->getInnerLinkPosition()
+    
+    rate.push_back(pos_diff[0]/time_diff);
+    rate.push_back(pos_diff[1]/time_diff);
+    rate.push_back(pos_diff[2]/time_diff);
+    rate.push_back(pos_diff[3]/time_diff);
+
+    return rate;
+            
 }
 
 
