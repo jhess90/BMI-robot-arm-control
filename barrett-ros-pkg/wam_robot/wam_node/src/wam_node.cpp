@@ -330,6 +330,7 @@ template<size_t DOF>
     ROS_INFO(" \n %zu-DOF WAM", DOF);
     jp_home = wam.getJointPositions();
 
+    pm.getSafetyModule()->setVelocityLimit(2.0);
 
 
 
