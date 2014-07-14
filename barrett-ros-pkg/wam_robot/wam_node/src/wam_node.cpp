@@ -310,6 +310,8 @@ template<size_t DOF>
     void
     publishHandTor(void);
     void
+    TorqueControl(void);
+    void
     updateRT(ProductManager& pm);
   };
 
@@ -909,6 +911,33 @@ template<size_t DOF>
   }
 
 
+//  Torque control to track position using feedback
+template<size_t DOF>
+  void WamNode<DOF>::TorqueControl() //systems::PeriodicDataLogger<debug_tuple>& logger
+  {
+    float u,e;
+    hand->setTorqueMode(Hand::WHOLE_HAND);
+
+    while (ros::ok())
+    {
+      hand->update();
+      Hand::jp_type pos_inner = hand->getInnerLinkPosition();
+      e = 1.0 - pos_inner[0];
+      u = -250*e;
+      if(u>250)u=250;
+      else if(u<-250)u=-250;
+      Hand::jt_type Torque(u);
+      hand->setTorqueCommand(Torque,Hand::F1);
+
+	 ROS_INFO("INNER: %f e: %f Torque: %f",pos_inner[0],e,u);
+
+
+      btsleep(1.0 / 200); // Sleep according to the specified publishing frequency
+    }
+  }
+
+
+
 //Function to update the real-time control loops
 template<size_t DOF>
   void WamNode<DOF>::updateRT(ProductManager& pm) //systems::PeriodicDataLogger<debug_tuple>& logger
@@ -1056,9 +1085,10 @@ template<size_t DOF>
     wam_node.init(pm);
     ros::Rate pub_rate(PUBLISH_FREQ);
 
-    if (pm.getHand())
+    if (pm.getHand()){
       boost::thread handPubThread(&WamNode<DOF>::publishHand, &wam_node);
       boost::thread handTorThread(&WamNode<DOF>::publishHandTor, &wam_node);
+      boost::thread handTorqueControlThread(&WamNode<DOF>::TorqueControl, &wam_node);}
 
     while (ros::ok() && pm.getSafetyModule()->getMode() == SafetyModule::ACTIVE)
     {
