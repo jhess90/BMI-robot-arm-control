@@ -387,9 +387,9 @@ template<size_t DOF>
       //Set up the BarrettHand torque publisher
       const char* bhand_mots[] = {"f1_torque", "f2_torque", "f3_torque", "spread_torque"};
       std::vector < std::string > bhand_motors(bhand_mots, bhand_mots + 4);
-      bhand_joint_state.name.resize(4);
-      bhand_joint_state.name = bhand_motors;
-      bhand_joint_state.effort.resize(4);
+      bhand_torque.name.resize(4);
+      bhand_torque.name = bhand_motors;
+      bhand_torque.effort.resize(4);
 
     }
 
@@ -901,9 +901,9 @@ template<size_t DOF>
       hand->update();
       torqq=hand->getFingertipTorque();
       for (size_t i = 0; i < 4; i++) // Save finger positions
-        bhand_joint_state.effort[i] = (float)torqq[i];
-      bhand_joint_state.header.stamp = ros::Time::now(); // Set the timestamp
-      bhand_torque_pub.publish(bhand_joint_state); // Publish the BarrettHand torque
+        bhand_torque.effort[i] = (float)torqq[i];
+      bhand_torque.header.stamp = ros::Time::now(); // Set the timestamp
+      bhand_torque_pub.publish(bhand_torque); // Publish the BarrettHand torque
       btsleep(1.0 / BHAND_PUBLISH_FREQ); // Sleep according to the specified publishing frequency
     }
   }
