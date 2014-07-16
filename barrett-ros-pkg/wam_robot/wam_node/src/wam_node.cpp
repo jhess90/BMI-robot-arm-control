@@ -218,11 +218,11 @@ template<size_t DOF>
     ros::Subscriber hand_pos_vel_cmd;
 
     //Published Topics
-    sensor_msgs::JointState wam_joint_state, bhand_joint_state;
+    sensor_msgs::JointState wam_joint_state, bhand_joint_state, bhand_torque;
     geometry_msgs::PoseStamped wam_pose;
 
     //Publishers
-    ros::Publisher wam_joint_state_pub, bhand_joint_state_pub, wam_pose_pub;
+    ros::Publisher wam_joint_state_pub, bhand_joint_state_pub, wam_pose_pub, bhand_torque_pub;
 
     //Services
     ros::ServiceServer gravity_srv, go_home_srv, hold_jpos_srv, hold_cpos_srv;
@@ -308,6 +308,10 @@ template<size_t DOF>
     void
     publishHand(void);
     void
+    publishHandTor(void);
+    void
+    TorqueControl(void);
+    void
     updateRT(ProductManager& pm);
   };
 
@@ -356,6 +360,7 @@ template<size_t DOF>
 
       //Publishing the following topics only if there is a BarrettHand present
       bhand_joint_state_pub = nh_.advertise < sensor_msgs::JointState > ("joint_states", 1); // bhand/joint_states
+      bhand_torque_pub = nh_.advertise < sensor_msgs::JointState > ("torque", 1); // bhand/joint_st
 
       //Subscribing the following topics only if there is a BarrettHand present
       hand_grasp = nh_.subscribe("hand_grasp_cmd", 1000, &WamNode::hand_grip, this); // 
@@ -380,6 +385,14 @@ template<size_t DOF>
       bhand_joint_state.name.resize(7);
       bhand_joint_state.name = bhand_joints;
       bhand_joint_state.position.resize(7);
+
+      //Set up the BarrettHand torque publisher
+      const char* bhand_mots[] = {"f1_torque", "f2_torque", "f3_torque", "spread_torque"};
+      std::vector < std::string > bhand_motors(bhand_mots, bhand_mots + 4);
+      bhand_torque.name.resize(4);
+      bhand_torque.name = bhand_motors;
+      bhand_torque.effort.resize(4);
+
     }
 
 
@@ -879,6 +892,52 @@ template<size_t DOF>
     }
   }
 
+
+template<size_t DOF>
+  void WamNode<DOF>::publishHandTor() //systems::PeriodicDataLogger<debug_tuple>& logger
+  {
+    std::vector<int> torqq;
+
+    while (ros::ok())
+    {
+      hand->update();
+      torqq=hand->getFingertipTorque();
+      for (size_t i = 0; i < 4; i++) // Save finger positions
+        bhand_torque.effort[i] = (float)torqq[i];
+      bhand_torque.header.stamp = ros::Time::now(); // Set the timestamp
+      bhand_torque_pub.publish(bhand_torque); // Publish the BarrettHand torque
+      btsleep(1.0 / BHAND_PUBLISH_FREQ); // Sleep according to the specified publishing frequency
+    }
+  }
+
+
+//  Torque control to track position using feedback
+template<size_t DOF>
+  void WamNode<DOF>::TorqueControl() //systems::PeriodicDataLogger<debug_tuple>& logger
+  {
+    float u,e;
+    hand->setTorqueMode(Hand::WHOLE_HAND);
+
+    while (ros::ok())
+    {
+      hand->update();
+      Hand::jp_type pos_inner = hand->getInnerLinkPosition();
+      e = 1.0 - pos_inner[0];
+      u = -250*e;
+      if(u>250)u=250;
+      else if(u<-250)u=-250;
+      Hand::jt_type Torque(u);
+      hand->setTorqueCommand(Torque,Hand::F1);
+
+	 ROS_INFO("INNER: %f e: %f Torque: %f",pos_inner[0],e,u);
+
+
+      btsleep(1.0 / 200); // Sleep according to the specified publishing frequency
+    }
+  }
+
+
+
 //Function to update the real-time control loops
 template<size_t DOF>
   void WamNode<DOF>::updateRT(ProductManager& pm) //systems::PeriodicDataLogger<debug_tuple>& logger
@@ -1026,8 +1085,10 @@ template<size_t DOF>
     wam_node.init(pm);
     ros::Rate pub_rate(PUBLISH_FREQ);
 
-    if (pm.getHand())
+    if (pm.getHand()){
       boost::thread handPubThread(&WamNode<DOF>::publishHand, &wam_node);
+      boost::thread handTorThread(&WamNode<DOF>::publishHandTor, &wam_node);
+      boost::thread handTorqueControlThread(&WamNode<DOF>::TorqueControl, &wam_node);}
 
     while (ros::ok() && pm.getSafetyModule()->getMode() == SafetyModule::ACTIVE)
     {
