@@ -322,6 +322,13 @@ template<size_t DOF>
     ros::NodeHandle n_("wam"); // WAM specific nodehandle
     ros::NodeHandle nh_("bhand"); // BarrettHand specific nodehandle
 
+    std::vector<Puck *> hpuck;
+    hpuck = pm.getHandPucks();
+    hpuck[0]->setProperty(Puck::HSG,20);
+    hpuck[1]->setProperty(Puck::HSG,20);
+    hpuck[2]->setProperty(Puck::HSG,20);
+
+
     //Setting up real-time command timeouts and initial values
     cart_vel_status = false; //Bool for determining cartesian velocity real-time state
     ortn_vel_status = false; //Bool for determining orientation velocity real-time state
@@ -437,7 +444,7 @@ template<size_t DOF>
   void WamNode<DOF>::hand_grip(std_msgs::Int32 x)
   {
     if(x.data==1)  hand->open();
-    if(x.data==2)  hand->close();    
+    if(x.data==2)  hand->close();
   }
 
 template<size_t DOF>
@@ -446,12 +453,12 @@ template<size_t DOF>
   //ROS_INFO("hehe");
   double Scale=20000.0;
   typedef Hand::jp_type hjp_t;
+
   //ROS_INFO("hehe 3");
   if(hp.f1>=0)
   {
     hjp_t pos((double)(hp.f1/Scale*2.4));
     hand->trapezoidalMove(pos, Hand::F1, false);
-    
   }
   if(hp.f2>=0)
   {//ROS_INFO("hehe 6");
@@ -490,7 +497,8 @@ template<size_t DOF>
         hand->velocityMove(rate[1], Hand::F2);
         hand->velocityMove(rate[2], Hand::F3);
         hand->velocityMove(rate[3], Hand::SPREAD);
-        assertPosition(hand, pos, 0.2);
+        //assertPosition(hand, pos, 0.2);
+	//hand->velocityMove(hpv.hz, Hand::GRASP);
   }
 
 
@@ -515,10 +523,16 @@ template<size_t DOF>
 
 
 
-    rate.push_back((Hand::jv_type)(pos_diff[0]/time_diff));
-    rate.push_back((Hand::jv_type)(pos_diff[1]/time_diff));
-    rate.push_back((Hand::jv_type)(pos_diff[2]/time_diff));
-    rate.push_back((Hand::jv_type)(pos_diff[3]/time_diff));
+//    rate.push_back((Hand::jv_type)(pos_diff[0]/time_diff));
+//    rate.push_back((Hand::jv_type)(pos_diff[1]/time_diff));
+//    rate.push_back((Hand::jv_type)(pos_diff[2]/time_diff));
+//    rate.push_back((Hand::jv_type)(pos_diff[3]/time_diff));
+
+    rate.push_back((Hand::jv_type)(innerLinkJp[0]/time_diff));
+    rate.push_back((Hand::jv_type)(innerLinkJp[1]/time_diff));
+    rate.push_back((Hand::jv_type)(innerLinkJp[2]/time_diff));
+    rate.push_back((Hand::jv_type)(innerLinkJp[3]/time_diff*0));
+
 
     return rate;
             
@@ -915,24 +929,27 @@ template<size_t DOF>
 template<size_t DOF>
   void WamNode<DOF>::TorqueControl() //systems::PeriodicDataLogger<debug_tuple>& logger
   {
-    float u,e;
+    float u,e,max,min,e_old,Hz;
+    Hz=200.0;
     hand->setTorqueMode(Hand::WHOLE_HAND);
-
+    max=250.0;
+    min=200.0;
     while (ros::ok())
     {
       hand->update();
       Hand::jp_type pos_inner = hand->getInnerLinkPosition();
       e = 1.0 - pos_inner[0];
-      u = -250*e;
-      if(u>250)u=250;
-      else if(u<-250)u=-250;
+      u = -((max-min)*e+min);
+      if(u>max)u=max;
+      else if(u<-max)u=-max;
       Hand::jt_type Torque(u);
       hand->setTorqueCommand(Torque,Hand::F1);
+      e_old=e;
 
-	 ROS_INFO("INNER: %f e: %f Torque: %f",pos_inner[0],e,u);
+//	 ROS_INFO("INNER: %f e: %f Torque: %f",pos_inner[0],e,u);
 
 
-      btsleep(1.0 / 200); // Sleep according to the specified publishing frequency
+      btsleep(1.0 / Hz); // Sleep according to the specified publishing frequency
     }
   }
 
@@ -1088,7 +1105,8 @@ template<size_t DOF>
     if (pm.getHand()){
       boost::thread handPubThread(&WamNode<DOF>::publishHand, &wam_node);
       boost::thread handTorThread(&WamNode<DOF>::publishHandTor, &wam_node);
-      boost::thread handTorqueControlThread(&WamNode<DOF>::TorqueControl, &wam_node);}
+      //boost::thread handTorqueControlThread(&WamNode<DOF>::TorqueControl, &wam_node);
+    }
 
     while (ros::ok() && pm.getSafetyModule()->getMode() == SafetyModule::ACTIVE)
     {
